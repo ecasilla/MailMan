@@ -11,39 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131021180023) do
+ActiveRecord::Schema.define(version: 0) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "contacts", force: true do |t|
-    t.string   "name",       null: false
-    t.string   "email",      null: false
-    t.integer  "users_id",   null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "contacts", ["users_id"], name: "index_contacts_on_users_id", using: :btree
-
-  create_table "templates", force: true do |t|
-    t.string   "template_name", null: false
-    t.text     "template",      null: false
-    t.integer  "users_id",      null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "templates", ["users_id"], name: "index_templates_on_users_id", using: :btree
-
-  create_table "users", force: true do |t|
-    t.string   "email",           null: false
-    t.string   "name",            null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "password_digest", null: false
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end
