@@ -11,4 +11,8 @@ class RecipentsController < ApplicationController
   def import
     @recipents = Recipents.import(params[:name], params[:email])
   end
+
+  def method_name
+    
+  end
 end
