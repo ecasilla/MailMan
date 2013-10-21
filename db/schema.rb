@@ -11,9 +11,50 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20131021192613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "campaigns", force: true do |t|
+    t.string "name"
+    t.date   "date"
+  end
+
+  create_table "campaigns_recipients", force: true do |t|
+    t.integer "campaign_id",  null: false
+    t.integer "recipient_id", null: false
+  end
+
+  create_table "email_templates", force: true do |t|
+    t.integer  "campaign_id"
+    t.string   "name"
+    t.text     "body"
+    t.date     "published_on"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "recipients", force: true do |t|
+    t.string   "name",       null: false
+    t.string   "email",      null: false
+    t.integer  "users_id",   null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "recipients", ["users_id"], name: "index_recipients_on_users_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "name",            null: false
+    t.string   "email",           null: false
+    t.string   "password_digest", null: false
+    t.string   "string",          null: false
+    t.integer  "phone_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end

@@ -1,9 +1,9 @@
 class CreateEmailTemplates < ActiveRecord::Migration
   def change
     create_table :email_templates do |t|
-      has_one :campaign
+      t.references :campaign
       t.string :name
-      t.text :email_template
+      t.text :body
       t.date :published_on
 
       t.timestamps
