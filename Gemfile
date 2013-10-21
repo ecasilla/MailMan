@@ -32,6 +32,9 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'resque' # or a compatible alternative / fork
+gem 'resque_mailer'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
