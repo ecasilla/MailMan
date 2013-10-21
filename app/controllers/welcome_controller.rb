@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  def show
-    render :welcome
+  def index
+    
   end
 end

@@ -1081,7 +1081,7 @@ $default-float: left;
 
 // We use this to control padding.
 
-// $side-nav-padding: em-calc(14 0);
+ $side-nav-padding: em-calc(14 0);
 
 // We use these to control list styles.
 
@@ -1255,8 +1255,8 @@ $default-float: left;
 
 // Background color for the top bar
 
-// $topbar-bg-color: #111;
-// $topbar-bg: $topbar-bg-color;
+$topbar-bg-color: #212D48 !default;
+$topbar-bg: $topbar-bg-color;
 
 // Height and margin
 
@@ -1284,8 +1284,8 @@ $default-float: left;
 // Set the link colors and styles for top-level nav
 
 // $topbar-link-color: #fff;
-// $topbar-link-color-hover: #fff;
-// $topbar-link-color-active: #fff;
+$topbar-link-color-hover: #fff;
+$topbar-link-color-active: #fff;
 // $topbar-link-weight: bold;
 // $topbar-link-font-size: em-calc(13);
 // $topbar-link-hover-lightness: -30%; // Darken by 30%

@@ -1,6 +1,6 @@
 Mailman::Application.routes.draw do
   
-  root :to => "welcome#show"
+  root :to => "welcome#index"
   
   resources :users, except: [:index]
 
