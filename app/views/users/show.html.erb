@@ -1,4 +1,10 @@
 <h1><%= @user.name %></h1>
 
-<%= link_to "Edit", edit_user_path(@user) %> |
-<%= link_to "Destroy", user_path(@user), :method => :delete %>
+ 
+
+
+<ul class="side-nav">
+  <li class="active"><%= link_to "Edit", edit_user_path(@user) %></li>
+  <li><%= link_to "Destroy", user_path(@user), :method => :delete %></li>
+  <li><%= link_to "Contacts",recipents_path %></li>
+</ul>

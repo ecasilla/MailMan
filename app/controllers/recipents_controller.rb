@@ -1,7 +1,7 @@
 class RecipentsController < ApplicationController
   
   def index
-    @recipents = Recipents.all
+    @recipents = Recipent.all
     respond_to do |format|
       format.html
       format.csv { send_data @recipents.to_csv }
@@ -9,10 +9,10 @@ class RecipentsController < ApplicationController
   end
 
   def import
-    @recipents = Recipents.import(params[:name], params[:email])
+    @recipents = Recipent.import(params[:name], params[:email])
   end
-
-  def method_name
+  
+  def show
     
   end
 end
