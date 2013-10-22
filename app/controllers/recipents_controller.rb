@@ -1,7 +1,7 @@
 class RecipentsController < ApplicationController
   
   def index
-    @recipents = Recipent.all
+    @recipents = Recipent.text_search(params[:query])
     respond_to do |format|
       format.html
       format.csv { send_data @recipents.to_csv }

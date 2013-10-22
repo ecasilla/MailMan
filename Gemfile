@@ -43,6 +43,8 @@ group :development do
   gem 'meta_request'
 end
 
+gem 'texticle', require: 'texticle/rails'
+
 gem "gatling_gun"
 
 gem 'twilio-ruby'

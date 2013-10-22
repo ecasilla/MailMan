@@ -81,8 +81,8 @@ $default-float: left;
 
 // $primary-color: #2ba6cb;
 // $secondary-color: #e9e9e9;
-// $alert-color: #c60f13;
-// $success-color: #5da423;
+ $alert-color: #c60f13;
+ $success-color: #5da423;
 
 // Make sure border radius matches unless we want it different.
 
@@ -127,14 +127,14 @@ $default-float: left;
 
  $small-screen: 768px;
  $medium-screen: 1280px;
-// $large-screen: 1440px;
+ $large-screen: 1440px;
 
-// $screen: "only screen";
-// $small: "only screen and (min-width: #{$small-screen})";
-// $medium: "only screen and (min-width: #{$medium-screen})";
-// $large: "only screen and (min-width: #{$large-screen})";
-// $landscape: "only screen and (orientation: landscape)";
-// $portrait: "only screen and (orientation: portrait)";
+$screen: "only screen";
+$small: "only screen and (min-width: #{$small-screen})";
+$medium: "only screen and (min-width: #{$medium-screen})";
+$large: "only screen and (min-width: #{$large-screen})";
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
 
 //// Cursors
 
