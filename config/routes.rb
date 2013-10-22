@@ -7,9 +7,8 @@ Mailman::Application.routes.draw do
     resources :templates
   end
 
-  resources :recipients do
-    collection { post :import }
-  end
+  resources :recipients 
+  
 
   resource :session, only: [:new, :create, :destroy]
 end

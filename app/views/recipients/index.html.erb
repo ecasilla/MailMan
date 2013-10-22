@@ -1,18 +1,16 @@
 
-<h3>Search Contact List</h3> 
-
- <%= form_for(@recipents) do |f| %>
-    
-    <%= f.file_field :recipents %>
-    <%= f.label :Contacts,  %><br/>
-    <%= f.text_field :recipents %>
-
-<% end %>
   
 
-<%= form_tag("/recipents", method: "get") do %>
-  <%= label_tag(:q, "Search for Contacts:") %>
-  <%= text_field_tag :search, params[:search] %>
-  <%= submit_tag("Search") %>
+<h3>Import Your List </h3>
+<%= file_field(:post, :attached, accept: 'csv') %>
+
+<h3>Create a Single Contact</h3>
+
+<%= form_for @recipient, method: :post do |f| %>
+  Name: <%= f.text_field :name %>
+  Email: <%= f.text_field :email %>
+         <%= f.hidden_field :user_id, value: "#{session[:user_id]}" %>
+  
+ <%= f.submit "Submit" , class: "button radius"  %>
 <% end %>
 

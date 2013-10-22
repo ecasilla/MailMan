@@ -1,10 +1,12 @@
 class TemplatesController < ApplicationController
   
   def index
-  @template = Template.new  
+    @template = Template.all
   end
 
   def new
+    @template = Template.new
+    render :index 
   end
 
   def show
