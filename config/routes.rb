@@ -7,7 +7,7 @@ Mailman::Application.routes.draw do
     resources :templates
   end
 
-  resources :recipents do
+  resources :recipients do
     collection { post :import }
   end
 
