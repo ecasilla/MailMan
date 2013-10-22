@@ -21,6 +21,8 @@ gem 'friendly_id', :require => "friendly_id"
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 
+gem 'carrierwave'
+
 gem 'zurb-foundation'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks

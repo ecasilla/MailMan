@@ -1,10 +1,10 @@
 <h1><%= @user.name %></h1>
-
+<li><%= link_to "Log Out", session_path, :method => :delete %></li>
  
 
 
 <ul class="side-nav">
   <li class="active"><%= link_to "Edit", edit_user_path(@user) %></li>
-  <li><%= link_to "Destroy", user_path(@user), :method => :delete %></li>
+  <li><%= link_to "Delete Account", user_path(@user), :method => :delete %></li>
   <li><%= link_to "Contacts",recipents_path %></li>
 </ul>

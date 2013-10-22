@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   has_secure_password
 extend FriendlyId
-  friendly_id :name, use: :slugged
+  friendly_id :id, use: :slugged
 
 def should_generate_new_friendly_id?
     new_record?
