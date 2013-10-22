@@ -125,8 +125,8 @@ $default-float: left;
 
 // Media Queries
 
-// $small-screen: 768px;
-// $medium-screen: 1280px;
+ $small-screen: 768px;
+ $medium-screen: 1280px;
 // $large-screen: 1440px;
 
 // $screen: "only screen";
@@ -357,14 +357,14 @@ $default-float: left;
 // We use these to build padding for buttons.
 
 // $button-med: em-calc(12);
-// $button-tny: em-calc(7);
+$button-tny: em-calc(8);
 // $button-sml: em-calc(9);
 // $button-lrg: em-calc(16);
 
 // We use this to control the display property.
 
 // $button-display: inline-block;
-// $button-margin-bottom: em-calc(20);
+$button-margin-bottom: em-calc(20);
 
 // We use these to control button text styles.
 
