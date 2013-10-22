@@ -369,14 +369,14 @@ $button-margin-bottom: em-calc(20);
 // We use these to control button text styles.
 
 // $button-font-family: inherit;
-// $button-font-color: #fff;
-// $button-font-color-alt: #333;
+ $button-font-color: #fff;
+ $button-font-color-alt: #333;
 // $button-font-med: em-calc(16);
 // $button-font-tny: em-calc(11);
 // $button-font-sml: em-calc(13);
 // $button-font-lrg: em-calc(20);
-// $button-font-weight: bold;
-// $button-font-align: center;
+ $button-font-weight: bold;
+ $button-font-align: center;
 
 // We use these to control various hover effects.
 
@@ -402,7 +402,7 @@ $button-margin-bottom: em-calc(20);
 
 // Sets the margin for the right side by default, and the left margin if right-to-left direction is used
 
-// $button-bar-margin-opposite: em-calc(10);
+$button-bar-margin-opposite: em-calc(10);
 
 //
 // Dropdown Button Variables
@@ -1261,7 +1261,7 @@ $topbar-bg: $topbar-bg-color;
 // Height and margin
 
 // $topbar-height: 45px;
-// $topbar-margin-bottom: 0;
+ $topbar-margin-bottom: 5;
 
 // Control Input height for top bar
 
