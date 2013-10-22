@@ -36,6 +36,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'rails_12factor', group: :production
+
 gem 'resque' # or a compatible alternative / fork
 gem 'resque_mailer'
 
