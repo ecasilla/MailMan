@@ -43,7 +43,7 @@ group :development do
   gem 'meta_request'
 end
 
-gem 'texticle', require: 'texticle/rails'
+gem 'textacular', '~> 3.0'
 
 gem "gatling_gun"
 
