@@ -15,8 +15,8 @@ class Recipent < ActiveRecord::Base
 
  def self.text_search(query)
   if query.present?
-    where("name @@ :q or content @@ :q", q: query)
-  else
+     search(query)
+ else
     scoped
   end
  end
