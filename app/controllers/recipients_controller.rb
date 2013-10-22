@@ -11,6 +11,7 @@ class RecipientsController < ApplicationController
 
   def create
     @recipient = Recipient.create(recipient_params)
+    #binding.pry
     render :show
   end
   
@@ -23,5 +24,5 @@ end
 private
 
   def recipient_params
-    params.require(:recipient).permit(:name, :email,:user_id)
+    params.require(:recipient).permit(:name, :email, :users_id)
   end
