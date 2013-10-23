@@ -1,4 +1,4 @@
-class Template < ActiveRecord::Base
+class EmailTemplate < ActiveRecord::Base
   has_one :campaign
 
   def self.text_search(query)

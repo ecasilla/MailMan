@@ -4,7 +4,7 @@ Mailman::Application.routes.draw do
   
   resources :users, except: [:index] do
     resources :campaigns
-    resources :templates
+    resources :email_templates
   end
 
   resources :recipients 

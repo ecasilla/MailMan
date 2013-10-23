@@ -1,16 +1,17 @@
-class TemplatesController < ApplicationController
+class EmailTemplatesController < ApplicationController
   
   def index
-    @template = Template.all
+    @template = Email
+    Template.all
   end
 
   def new
-    @template = Template.new
-    render :index 
+    @template = EmailTemplate.new
+    render :new 
   end
 
   def create
-    @template = Template.create(template_params)
+    @template = EmailTemplate.create(template_params)
   end
 
   def show

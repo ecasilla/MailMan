@@ -12,7 +12,9 @@
  *= require foundation_and_overrides
  *= require_tree .
  */
-
+.tinymce{
+margin: 100px;
+}
 .input_wrapper{
   margin-top:15px; 
 }

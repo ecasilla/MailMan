@@ -1,0 +1,18 @@
+
+
+<div class="row">
+<div class="large-grid-3">
+
+ </div>
+</div>
+
+<div class="row">
+  <div class="small-2 large-4 columns">Create Your Template</div>
+   <%= form_for(@template) do |f| %>
+          
+  <%= f.text_area_tag :body, :class => "tinymce", rows: 40, :cols => 120 %>
+  <%= f.submit %>
+<%= tinymce %>
+</div> 
+  <% end %>
+ 
