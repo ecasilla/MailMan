@@ -1,8 +1,7 @@
 class EmailTemplatesController < ApplicationController
   
   def index
-    @template = Email
-    Template.all
+    @template = EmailTemplate.all
   end
 
   def new

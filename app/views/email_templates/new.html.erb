@@ -1,18 +1,11 @@
+<%= link_to "Profile",user_path(@user) %>
+<h3>Enter Your Email Body</h3>
 
+<%= form_for @template do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
 
-<div class="row">
-<div class="large-grid-3">
-
- </div>
-</div>
-
-<div class="row">
-  <div class="small-2 large-4 columns">Create Your Template</div>
-   <%= form_for(@template) do |f| %>
-          
-  <%= f.text_area_tag :body, :class => "tinymce", rows: 40, :cols => 120 %>
-  <%= f.submit %>
-<%= tinymce %>
-</div> 
-  <% end %>
- 
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+  <%= f.submit "Submit" ,class: "button radius"  %>
+<% end %>
