@@ -1,11 +1,14 @@
+<dl class="sub-nav">
+<dd class="active"><a href="#">Main</a></dd>
+<dd><li><%= link_to "Edit", edit_user_path(@user) %></li></dd>
+<dd><li><%= link_to "Contacts",recipients_path %></li></dd>
+<dd><li><%= link_to "Templates",user_campaigns_path(@user) %></li></dd>
+<dd><li><%= link_to "Delete Account", user_path(@user), :method => :delete %></li></dd>
+</dl>
 <h1><%= @user.name %></h1>
-<li><%= link_to "Log Out", session_path, :method => :delete %></li>
+<%= link_to "Log Out", session_path, :method => :delete, class: "button radius tiny  " %>
  
 
 
-<ul class="side-nav">
-  <li><%= link_to "Edit", edit_user_path(@user) %></li>
-  <li><%= link_to "Delete Account", user_path(@user), :method => :delete %></li>
-  <li><%= link_to "Contacts",recipients_path %></li>
-  <li><%= link_to "Campaign",user_campaigns_path(@user) %></li>
-</ul>
+
+

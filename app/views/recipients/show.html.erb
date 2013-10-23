@@ -1,2 +1,13 @@
-<%= @recipient.name %>
-<%= @recipient.email %>
+<table>
+  <thead>
+    <tr>
+      <th width="200">Name</th>
+      <th width="150">Email</th>
+    </tr>
+  </thead>
+    <tr>
+      <td><%= @recipent.name%></td>
+      <td><%= @recipent.email%></td>
+      <td><%=link_to "Edit" %></td>
+
+    </tr>

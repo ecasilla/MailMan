@@ -1,24 +1,20 @@
 class RecipientsController < ApplicationController
   
   def index
-    @recipient = Recipient.all
-    # @recipient = Recipient.text_search(params[:query])
-    # respond_to do |format|
-    #   format.html
-    #   format.csv { send_data @recipents.to_csv }
-    #end    
+    @recipients = Recipient.all 
   end
 
   def create
     @recipient = Recipient.create(recipient_params)
-    render :show
   end
 
   def new
     @recipient = Recipient.new
   end
   
+
   def show
+    @recipient = Recipient.find(recipient_params)
   end
 
   private
@@ -29,4 +25,8 @@ class RecipientsController < ApplicationController
 
 end
 
-
+# @recipient = Recipient.text_search(params[:query])
+# respond_to do |format|
+#   format.html
+#   format.csv { send_data @recipents.to_csv }
+#end   

@@ -650,10 +650,10 @@ $button-bar-margin-opposite: em-calc(10);
 
 // We use these to controls height and width styles.
 
-// $f-dropdown-max-width: 200px;
-// $f-dropdown-height: auto;
-// $f-dropdown-max-height: none;
-// $f-dropdown-margin-top: 2px;
+$f-dropdown-max-width: 200px;
+$f-dropdown-height: auto;
+$f-dropdown-max-height: none;
+$f-dropdown-margin-top: 2px;
 
 // We use this to control the background color
 
@@ -1108,16 +1108,16 @@ $button-bar-margin-opposite: em-calc(10);
 
 // We use these to control margin and padding
 
-// $sub-nav-list-margin: em-calc(-4 0 18);
-// $sub-nav-list-padding-top: em-calc(4);
+$sub-nav-list-margin: em-calc(-4 0 18);
+$sub-nav-list-padding-top: em-calc(4);
 
 // We use this to control the definition
 
-// $sub-nav-font-size: em-calc(14);
-// $sub-nav-font-color: #999;
-// $sub-nav-font-weight: normal;
-// $sub-nav-text-decoration: none;
-// $sub-nav-border-radius: 1000px;
+$sub-nav-font-size: em-calc(14);
+$sub-nav-font-color: #999;
+$sub-nav-font-weight: normal;
+$sub-nav-text-decoration: none;
+$sub-nav-border-radius: 1000px;
 
 // We use these to control the active item styles
 
