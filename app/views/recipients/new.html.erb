@@ -3,6 +3,10 @@
 
 <%= file_field(:post, :attached, accept: 'csv') %>
 
+<%= form_for @recipient do |f| %>
+  <%= f.file_field(:post, :attached, accept: 'csv')  %>
+<% end %>
+
 <h3>Create a Single Contact</h3>
 
 <%= form_for @recipient, method: :post do |f| %>

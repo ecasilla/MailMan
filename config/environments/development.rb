@@ -17,16 +17,6 @@ Mailman::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
 
-#   ActionMailer::Base.smtp_settings = {
-#   :user_name => ENV['SENDGRID_USERNAME'] ="ecasilla"
-#   :password => ENV['SENDGRID_PASSWORD'] = "rugged21"
-#   :domain => 'heroku.com',
-#   :address => 'smtp.sendgrid.net',
-#   :port => 587,
-#   :authentication => :plain,
-#   :enable_starttls_auto => true
-# }
-
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

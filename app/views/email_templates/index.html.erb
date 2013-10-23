@@ -1,1 +1,16 @@
 <h2>These Are All Your Templates</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th width="200">Name</th>
+      <th width="150">Body</th>
+    </tr>
+  </thead>
+    <tr>
+      <% @email_template.each do |template| %>
+      <td><%= template.name%></td>
+      <td><%= template.body%></td>
+  <% end %>
+  </tbody>
+</table>

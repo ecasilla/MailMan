@@ -6,15 +6,16 @@ class EmailTemplatesController < ApplicationController
 
   def new
     @email_template = EmailTemplate.new
-    render :new 
+ 
   end
 
   def create
     @email_template = EmailTemplate.create(template_params)
+    render :show
   end
 
   def show
-    
+     @email_template = EmailTemplate.find(email_params[:id])
   end
 
   def edit
