@@ -5,6 +5,7 @@
 <dd><li><%= link_to "Contacts",recipients_path %></li></dd>
 <dd><li><%= link_to "Templates",user_campaigns_path(@user) %></li></dd>
 <dd><li><%= link_to "Delete Account", user_path(@user), :method => :delete %></li></dd>
+<dd><li><%= link_to "Log Out", session_path, :method => :delete %></li></dd>
 </dl>
 <h1>Editing <%= @user.email %></h1>
 

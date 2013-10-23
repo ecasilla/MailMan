@@ -2,8 +2,8 @@ class CampaignsController < ApplicationController
   
   def index
     @user = User.find_by(id: params[:user_id].split("-").first)
-    @email_template = EmailTemplate.all
-    @recipients = Recipient.all
+    @campaigns = @user.campaigns
+    #@recipients = Recipient.all
   end
 
   def new

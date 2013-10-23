@@ -6,7 +6,6 @@ class EmailTemplatesController < ApplicationController
 
   def new
     @email_template = EmailTemplate.new
- 
   end
 
   def create
