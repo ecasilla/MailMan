@@ -10,14 +10,5 @@
 <dd><li><%= link_to "Delete Account", user_path(@user), :method => :delete %></li></dd>
 </dl>
 
-
-
-<%= form_for(@campaign, url: user_campaigns_path(@user) ) do |f| %>
-  <%= f.label :Name %>
-  <%= f.text_field :name %>
-  <%= f.submit class: "button tiny radius" %>
-<% end %>
-
-
-
+<%= link_to "Create Email Template", new_user_campaign_email_template_path(@user,@campaign), class: "button tiny radius"%>
 

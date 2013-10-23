@@ -3,10 +3,14 @@ class Campaign < ActiveRecord::Base
   has_many :recipients
 
   def self.text_search(query)
-  if query.present?
-     search(query)
- else
-    scoped
+    if query.present?
+       search(query)
+    else
+      scoped
+    end
+ end 
+
+  def to_param
+    "#{id} #{name}".parameterize
   end
- end  
 end

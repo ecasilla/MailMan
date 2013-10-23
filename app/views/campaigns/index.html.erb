@@ -10,5 +10,11 @@
 <dd><li><%= link_to "Delete Account", user_path(@user), :method => :delete %></li></dd>
 </dl>
 
-<%= link_to "Create Campaign", new_user_campaign_path(@user) ,class: "button tiny radius"%>
+<divclass="large-block-grid-4">
+
+<a href="<%= @email_template.all %>" data-dropdown="drop" class="small secondary radius button dropdown">Email Template List</a>
+<a href="<%= @recipients.all %>" data-dropdown="drop" class="small secondary radius button dropdown">Email Recipients List</a>
+</div>  
+
+<%= link_to "Create Email Campaign", new_user_campaign_path(@user) ,class: "button tiny radius"%>
 

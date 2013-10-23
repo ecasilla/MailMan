@@ -7,14 +7,16 @@ class CampaignsController < ApplicationController
   end
 
   def new
+    @campaign = Campaign.new
     @user = User.find_by(id: params[:user_id].split("-").first)
     @email_template = EmailTemplate.all
     @recipients = Recipient.all
   end
 
   def create
+    @campaign = Campaign.create(campaigns_params)
     @user = User.find_by(id: params[:user_id].split("-").first)
-    @email_template = EmailTemplate.new
+    render :show
   end
 
   def show
@@ -22,10 +24,15 @@ class CampaignsController < ApplicationController
   end
 
   def edit
-    
   end
 
   def delete
-    
   end
+
+  private
+
+  def campaigns_params
+    params.require(:campaign).permit(:name,:id)
+  end
+
 end
