@@ -14,9 +14,10 @@ class CampaignsController < ApplicationController
   end
 
   def create
-    @campaign = Campaign.create(campaigns_params)
     @user = User.find_by(id: params[:user_id].split("-").first)
-    render :show
+    @campaign = @user.campaigns.create(campaigns_params)
+    
+    redirect_to user_campaign_path(@user, @campaign)
   end
 
   def show
