@@ -1,16 +1,26 @@
+<h2>These Are All Your Recipients</h2>
+<%= link_to "Create Contact", new_recipient_path %>
+ 
 
-  
+  <li><%= @recipient %><li>
 
-<h3>Import Your List </h3>
-<%= file_field(:post, :attached, accept: 'csv') %>
 
-<h3>Create a Single Contact</h3>
-
-<%= form_for @recipient, method: :post do |f| %>
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-         <%= f.hidden_field :users_id, :value => current_user.id %>
-  
- <%= f.submit "Submit" , class: "button radius"  %>
-<% end %>
-
+<table>
+  <thead>
+    <tr>
+      <th width="200">Name</th>
+      <th width="150">Email</th>
+    </tr>
+  </thead>
+    <tr>
+      <%= @recipient.each do |recipient| %>
+      <td><%@recipent.name%></td>
+      <td><%@recipent.email%></td>
+  <% end %>
+    </tr>
+    <tr>
+      <td>Joe</td>
+      <td>joe@new.com</td>
+    </tr>
+  </tbody>
+</table>

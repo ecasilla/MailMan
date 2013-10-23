@@ -1,28 +1,32 @@
 class RecipientsController < ApplicationController
   
   def index
-    @recipient = Recipient.new
+    @recipient = Recipient.all
     # @recipient = Recipient.text_search(params[:query])
     # respond_to do |format|
     #   format.html
     #   format.csv { send_data @recipents.to_csv }
-    # end
+    #end    
   end
 
   def create
     @recipient = Recipient.create(recipient_params)
-    #binding.pry
     render :show
+  end
+
+  def new
+    @recipient = Recipient.new
   end
   
   def show
-    
   end
-end
 
-
-private
+  private
 
   def recipient_params
     params.require(:recipient).permit(:name, :email, :users_id)
   end
+
+end
+
+

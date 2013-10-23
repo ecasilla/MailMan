@@ -1,16 +1,16 @@
 class EmailTemplatesController < ApplicationController
   
   def index
-    @template = EmailTemplate.all
+    @email_template = EmailTemplate.all
   end
 
   def new
-    @template = EmailTemplate.new
+    @email_template = EmailTemplate.new
     render :new 
   end
 
   def create
-    @template = EmailTemplate.create(template_params)
+    @email_template = EmailTemplate.create(template_params)
   end
 
   def show
@@ -30,5 +30,5 @@ end
  private
 
   def template_params
-    params.require(:template).permit(:name,:text)
+    params.require(:template).permit(:name,:body)
   end

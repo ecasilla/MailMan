@@ -1,5 +1,5 @@
 class Campaign < ActiveRecord::Base
-  has_one :template
+  has_one :email_template
   has_many :recipients
 
   def self.text_search(query)

@@ -1,6 +1,7 @@
 class CampaignsController < ApplicationController
   
-  def index  
+  def index
+    @user = User.find_by(id: params[:user_id].split("-").first)
   end
 
   def new
@@ -11,7 +12,8 @@ class CampaignsController < ApplicationController
   end
 
   def show
-    
+    @user = User.find_by(id: params[:user_id].split("-").first)
+    binding.pry
   end
 
   def edit

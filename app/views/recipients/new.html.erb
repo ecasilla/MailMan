@@ -1,0 +1,14 @@
+
+<h3>Import Your List </h3>
+
+<%= file_field(:post, :attached, accept: 'csv') %>
+
+<h3>Create a Single Contact</h3>
+
+<%= form_for @recipient, method: :post do |f| %>
+  Name: <%= f.text_field :name %>
+  Email: <%= f.text_field :email %>
+         <%= f.hidden_field :users_id, :value => current_user.id %>
+  
+ <%= f.submit "Submit" , class: "button radius"  %>
+<% end %>

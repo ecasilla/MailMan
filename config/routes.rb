@@ -3,8 +3,9 @@ Mailman::Application.routes.draw do
   root :to => "welcome#index"
   
   resources :users, except: [:index] do
-    resources :campaigns
-    resources :email_templates
+    resources :campaigns do
+      resource :email_template
+    end
   end
 
   resources :recipients 
