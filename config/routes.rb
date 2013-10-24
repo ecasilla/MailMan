@@ -6,7 +6,7 @@ Mailman::Application.routes.draw do
   
   resources :users, except: [:index] do
     resources :campaigns, shallow: true do
-      resource :email_template, shallow: true
+      resource :email_template, shallow: true, only: [:new, :create, :edit, :update]
     end
   end
 

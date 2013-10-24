@@ -1,5 +1,6 @@
 class EmailTemplatesController < ApplicationController
   before_action :set_campaign
+  before_action :set_email_template 
   
   def index
     @recipient = Recipient.all
@@ -22,29 +23,23 @@ class EmailTemplatesController < ApplicationController
     end
   end
 
-  def show
-     @email_template = EmailTemplate.find(email_params[:id])
+  def edit
   end
 
   def update
-    # if @email_template.update_attributes(email_params)
-    #   redirect_to user_campaign_path(@user, @campaign)
-    # else
-    #   render :edit
-    # end
+    if @email_template.update_attributes(template_params)
+      redirect_to campaign_path(@campaign)
+    else
+      render :edit
+    end
   end
-
-  def delete
-    # if @email_template.destroy
-    #   redirect_to user_campaign_path(@user, @campaign)
-    # else
-    #   render :edit
-    # end
-  end
-
 end
 
  private
+
+   def set_email_template
+     @email_template = @campaign.email_template
+   end
 
   def template_params
     params.require(:email_template).permit(:name,:body)
