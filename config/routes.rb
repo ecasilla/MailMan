@@ -5,8 +5,8 @@ Mailman::Application.routes.draw do
   get '/contact' => 'welcome#contact'
   
   resources :users, except: [:index] do
-    resources :campaigns do
-      resource :email_template
+    resources :campaigns, shallow: true do
+      resource :email_template, shallow: true
     end
   end
 
