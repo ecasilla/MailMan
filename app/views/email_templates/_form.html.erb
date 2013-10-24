@@ -1,4 +1,4 @@
-<%= form_for @email_template, :url => user_campaign_email_template_path(@user, @campaign) do |f| %>
+<%= form_for @email_template, :url => campaign_email_template_path(@campaign) do |f| %>
   <%= f.label :Template%>
   <%= f.text_field :name %>
   <%= f.label :body %>

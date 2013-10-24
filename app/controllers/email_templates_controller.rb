@@ -1,5 +1,4 @@
 class EmailTemplatesController < ApplicationController
-  before_action :set_user, only: [:index, :new, :create, :show]
   before_action :set_campaign
   
   def index
@@ -13,8 +12,14 @@ class EmailTemplatesController < ApplicationController
   end
 
   def create
-    @email_template = EmailTemplate.create(template_params)
-    redirect_to user_campaigns_path(@user, @campaign)
+    @email_template = EmailTemplate.new(template_params)
+    @email_template.campaign = @campaign
+
+    if @email_template.save
+      redirect_to campaign_path(@campaign)
+    else
+      render :new
+    end
   end
 
   def show
@@ -43,10 +48,6 @@ end
 
   def template_params
     params.require(:email_template).permit(:name,:body)
-  end
-
-  def set_user
-    @user = User.find_by(id: params[:user_id])
   end
 
   def set_campaign 
