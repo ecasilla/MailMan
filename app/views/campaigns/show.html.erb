@@ -9,6 +9,7 @@
   <%= link_to 'Create Template', new_campaign_email_template_path(@campaign), class: 'button tiny radius' %>
 <% end %>
 
+
 <h3>Current Recipients:</h3>
 <ul>
   <% @campaign.recipients.each do |recipient| %>

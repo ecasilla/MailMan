@@ -1,6 +1,6 @@
 class CampaignsController < ApplicationController
   before_action :set_user, only: [:index, :new, :create, :show]
-  before_action :set_campaign, only: [:show, :edit]
+  before_action :set_campaign, only: [:show, :edit, :update]
 
   def index
     @campaigns = @user.campaigns
@@ -24,18 +24,23 @@ class CampaignsController < ApplicationController
   end
 
   def update
-    if @campaign.update_attributes(campaign_params)
-      binding.pry
-      redirect_to campaign_path(@campaign)
-    else
+    #for each recipient id in the list create a new recipient 
+    #object save it to the database and push that object back into the view
+    if @campaign.recipients.nil?
       render :edit
+    else
+      params[:campaign][:recipient_ids].each do |recipient_id|
+        if recipient_id != ""
+        @campaign.recipients << Recipient.find(recipient_id)
+        end
+      end
     end
   end
 
   private
 
   def campaigns_params
-    params.require(:campaign).permit(:name,:id)
+    params.require(:campaign).permit(:name,:id,:recipient_ids)
   end
 
   def set_user
