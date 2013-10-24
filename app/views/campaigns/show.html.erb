@@ -7,5 +7,6 @@
 
 <h3>Add Recipients</h3>
 <%= form_for @campaign do |f| %>
-  <%= f.select :recipients, options_from_collection_for_select(current_user.recipients, :id, :emal) %> %>
+  <%= f.collection_select(:recipient_ids, current_user.recipients, :id, :email, {}, multiple: true) %>
+  <%= f.submit :save %>
 <% end %>
