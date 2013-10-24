@@ -24,8 +24,8 @@ class CampaignsController < ApplicationController
   end
 
   def update
-      @recipients = recipient_id
     if @campaign.update_attributes(campaign_params)
+      binding.pry
       redirect_to campaign_path(@campaign)
     else
       render :edit
