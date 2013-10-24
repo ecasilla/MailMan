@@ -14,7 +14,6 @@ class CampaignsController < ApplicationController
 
   def create
     @campaign = @user.campaigns.create(campaigns_params)
-    
     redirect_to user_campaign_path(@user, @campaign)
   end
 
