@@ -17,10 +17,11 @@
       <th width="150">Email</th>
     </tr>
   </thead>
+  <% @recipients.each do |recipient| %>
     <tr> 
-      <% @recipients.each do |recipient| %>
       <td><%= recipient.name%></td>
       <td><%= recipient.email%></td>
+    </tr>
   <% end %>
   </tbody>
 </table>
