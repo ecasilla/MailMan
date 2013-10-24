@@ -14,7 +14,7 @@ class CampaignsController < ApplicationController
 
   def create
     @campaign = @user.campaigns.create(campaigns_params)
-    redirect_to user_campaign_path(@user, @campaign)
+    redirect_to campaign_path(@campaign)
   end
 
   def show
@@ -24,7 +24,12 @@ class CampaignsController < ApplicationController
   end
 
   def update
-    binding.pry
+      @recipients = recipient_id
+    if @campaign.update_attributes(campaign_params)
+      redirect_to campaign_path(@campaign)
+    else
+      render :edit
+    end
   end
 
   private
@@ -40,6 +45,4 @@ class CampaignsController < ApplicationController
   def set_campaign
     @campaign = Campaign.find_by(id: params[:id])
   end
-
-
 end
