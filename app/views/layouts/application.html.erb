@@ -46,7 +46,7 @@
         <dd><li><%= link_to "Main",user_path(current_user) %></li></dd>
         <dd><li><%= link_to "Edit", edit_user_path(current_user) %></li></dd>
         <dd><li><%= link_to "Contacts",recipients_path  %></li></dd>
-        <dd><li><%= link_to "Templates",user_campaigns_path(current_user) %></li></dd>
+        <dd><li><%= link_to "Campaigns",user_campaigns_path(current_user) %></li></dd>
         <dd><li><%= link_to "Delete Account", user_path(current_user), :method => :delete %></li></dd>
         <dd><li><%= link_to "Log Out", session_path, :method => :delete %></li></dd>
       </dl>
