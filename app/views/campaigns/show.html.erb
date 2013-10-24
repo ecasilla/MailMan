@@ -4,3 +4,8 @@
 <% else %>
   <%= link_to 'Create Template', new_campaign_email_template_path(@campaign) %>
 <% end %>
+
+<h3>Add Recipients</h3>
+<%= form_for @campaign do |f| %>
+  <%= f.select :recipients, options_from_collection_for_select(current_user.recipients, :id, :emal) %> %>
+<% end %>
