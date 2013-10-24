@@ -2,7 +2,7 @@ class Recipient < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
   validates :name, presence: true
   has_many :campaigns
-  belongs_to :users
+  belongs_to :user
 
   mount_uploader :recipients, RecipientsUploader
 

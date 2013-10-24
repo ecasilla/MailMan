@@ -1,11 +1,5 @@
-<%= form_for @recipient do |f| %>
-  <%= f.file_field(:attached, accept: 'csv')  %>
-<% end %>
-
-<%= form_for @recipient, method: :post do |f| %>
+<%= form_for @recipient, method: :post, url: user_recipients_path(current_user) do |f| %>
   Name: <%= f.text_field :name %>
   Email: <%= f.text_field :email %>
-         <%= f.hidden_field :users_id, :value => current_user.id %>
-  
  <%= f.submit "Submit" , class: "button radius"  %>
 <% end %>

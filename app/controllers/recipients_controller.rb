@@ -1,15 +1,20 @@
 class RecipientsController < ApplicationController
   
+  before_action :set_user, only: [:index, :create]
+
   def index
-    @recipients = Recipient.all 
+    @recipients = @user.recipients
   end
 
   def create
-    @recipient = Recipient.create(recipient_params)
-    # respond_to do |format|
-    #   format.csv { send_data @recipents.to_csv }
-    # end 
-    redirect_to recipients_path
+    @recipient = Recipient.new(recipient_params)
+    @recipient.user = @user
+
+    if @recipient.save
+      redirect_to user_recipients_path(@user)
+    else
+      render :new
+    end
   end
 
   def new
@@ -28,6 +33,7 @@ class RecipientsController < ApplicationController
     params.require(:recipient).permit(:name, :email, :users_id)
   end
 
+  def set_user
+    @user = User.find_by(id: params[:user_id])
+  end
 end
-
-# @recipient = Recipient.text_search(params[:query])
