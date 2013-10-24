@@ -1,16 +1,11 @@
 <divclass="large-block-grid-4">
 
-<%= collection_select(:recipients, :id, @recipient, :name, :email, options ={:prompt => "-Select a Email Template"}, :class =>"small secondary radius button dropdown") %>
+<ul>
+  <% @campaigns.each do |campaign| %>
+    <li><%= link_to campaign.name, user_campaign_path(current_user, campaign) %></li>
+  <% end %>
+</ul>
 
 </div>  
 
-
-
-
-
-
-
-
 <%= link_to "Create Email Campaign", new_user_campaign_path(@user) ,class: "button tiny radius"%>
-
-
