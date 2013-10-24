@@ -9,7 +9,7 @@ Mailman::Application.routes.draw do
       resource :email_template, shallow: true, only: [:new, :create, :edit, :update]
     end
 
-    resources :recipients, shallow: true
+    resources :recipients, shallow: true, only: [:new, :create, :index]
   end
 
   resource :session, only: [:new, :create, :destroy]

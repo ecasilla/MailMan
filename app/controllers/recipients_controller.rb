@@ -19,12 +19,6 @@ class RecipientsController < ApplicationController
 
   def new
     @recipient = Recipient.new
-      
-  end
-  
-
-  def show
-    @recipient = Recipient.find(recipient_params)
   end
 
   private
