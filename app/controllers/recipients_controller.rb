@@ -6,10 +6,14 @@ class RecipientsController < ApplicationController
 
   def create
     @recipient = Recipient.create(recipient_params)
+    respond_to do |format|
+      format.csv { send_data @recipents.to_csv }
+    end 
   end
 
   def new
     @recipient = Recipient.new
+      
   end
   
 
@@ -26,7 +30,3 @@ class RecipientsController < ApplicationController
 end
 
 # @recipient = Recipient.text_search(params[:query])
-# respond_to do |format|
-#   format.html
-#   format.csv { send_data @recipents.to_csv }
-#end   

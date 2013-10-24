@@ -15,7 +15,6 @@ class EmailTemplatesController < ApplicationController
   def create
     @email_template = @campaign.create(template_params)
     redirect_to user_campaign_path(@user, @campaign)
-
   end
 
   def show
@@ -42,6 +41,6 @@ end
     @user = User.find_by(id: params[:user_id].split("-").first)
   end
 
-  def set_campaign 
+  def set_campagn 
     @user = Campaign.find_by(id: params[:campaign_id].split("-").first)
   end

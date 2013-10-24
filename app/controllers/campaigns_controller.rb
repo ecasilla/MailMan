@@ -3,7 +3,6 @@ class CampaignsController < ApplicationController
 
   def index
     @campaigns = @user.campaigns
-    #@recipients = Recipient.all
   end
 
   def new
