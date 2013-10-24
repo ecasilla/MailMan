@@ -9,9 +9,16 @@
 
 <divclass="large-block-grid-4">
 
-<a href="<%= "" %>" data-dropdown="drop" class="small secondary radius button dropdown">Email Template List</a>
-<a href="<%= "" %>" data-dropdown="drop" class="small secondary radius button dropdown">Email Recipients List</a>
+<%= collection_select(:recipients, :id, @recipient, :name, :email, options ={:prompt => "-Select a Email Template"}, :class =>"small secondary radius button dropdown") %>
+
 </div>  
+
+
+
+
+
+
+
 
 <%= link_to "Create Email Campaign", new_user_campaign_path(@user) ,class: "button tiny radius"%>
 

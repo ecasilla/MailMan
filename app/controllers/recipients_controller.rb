@@ -6,9 +6,10 @@ class RecipientsController < ApplicationController
 
   def create
     @recipient = Recipient.create(recipient_params)
-    respond_to do |format|
-      format.csv { send_data @recipents.to_csv }
-    end 
+    # respond_to do |format|
+    #   format.csv { send_data @recipents.to_csv }
+    # end 
+    redirect_to recipients_path
   end
 
   def new
