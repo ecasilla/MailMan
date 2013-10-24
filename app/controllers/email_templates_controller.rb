@@ -21,12 +21,20 @@ class EmailTemplatesController < ApplicationController
      @email_template = EmailTemplate.find(email_params[:id])
   end
 
-  def edit
-    
+  def update
+    if @email_template.update_attributes(email_params)
+      redirect_to user_campaign_path(@user, @campaign)
+    else
+      render :edit
+    end
   end
 
   def delete
-    
+    if @email_template.destroy
+      redirect_to user_campaign_path(@user, @campaign)
+    else
+      render :edit
+    end
   end
 
 end
