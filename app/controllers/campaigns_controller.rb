@@ -1,5 +1,6 @@
 class CampaignsController < ApplicationController
   before_action :set_user, only: [:index, :new, :create, :show]
+  before_action :set_campaign, only: [:show, :edit]
 
   def index
     @campaigns = @user.campaigns
@@ -17,7 +18,9 @@ class CampaignsController < ApplicationController
   end
 
   def show
-    @campaign = Campaign.find_by(id: params[:id])
+  end
+
+  def edit
   end
 
   def update
@@ -33,5 +36,10 @@ class CampaignsController < ApplicationController
   def set_user
     @user = User.find_by(id: params[:user_id])
   end
+
+  def set_campaign
+    @campaign = Campaign.find_by(id: params[:id])
+  end
+
 
 end

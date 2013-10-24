@@ -1,3 +1,7 @@
 <h1>Editing <%= @campaign.name %></h1>
 
-<%= render 'form' %>
+<h3>Add Recipients</h3>
+<%= form_for @campaign do |f| %>
+  <%= f.collection_select(:recipient_ids, current_user.recipients, :id, :email, {}, multiple: true) %>
+  <%= f.submit :save %>
+<% end %>

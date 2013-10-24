@@ -1,12 +1,15 @@
 <h1>Campaign: <%= @campaign.name %></h1>
+<%= link_to "Edit Campaign", edit_campaign_path(@campaign) %>
+<br>
 <% if @campaign.email_template %>
   <%= link_to "Edit Template", edit_campaign_email_template_path(@campaign )  %>
 <% else %>
   <%= link_to 'Create Template', new_campaign_email_template_path(@campaign) %>
 <% end %>
 
-<h3>Add Recipients</h3>
-<%= form_for @campaign do |f| %>
-  <%= f.collection_select(:recipient_ids, current_user.recipients, :id, :email, {}, multiple: true) %>
-  <%= f.submit :save %>
-<% end %>
+<h3>Current Recipients:</h3>
+<ul>
+  <% @campaign.recipients.each do |recipient| %>
+    <li><%= recipient.email %></li>
+  <% end %>
+</ul>
