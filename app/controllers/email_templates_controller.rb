@@ -46,9 +46,9 @@ end
   end
 
   def set_user
-    @user = User.find_by(id: params[:user_id].split("-").first)
+    @user = User.find_by(id: params[:user_id])
   end
 
   def set_campaign 
-    @campaign = Campaign.find_by(id: params[:campaign_id].split("-").first)
+    @campaign = Campaign.find_by(id: params[:campaign_id])
   end
