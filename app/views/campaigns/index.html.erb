@@ -1,12 +1,3 @@
-<dl class="sub-nav">
-<dd><li><%= link_to "Main",user_path(@user) %></li></dd>
-<dd><li><%= link_to "Edit", edit_user_path(@user) %></li></dd>
-<dd><li><%= link_to "Contacts",recipients_path %></li></dd>
-<dd class="active"><li><%= link_to "Templates",user_campaigns_path(@user) %></li></dd>
-<dd><li><%= link_to "Delete Account", user_path(@user), :method => :delete %></li></dd>
-<dd><li><%= link_to "Log Out", session_path, :method => :delete %></li></dd>
-</dl>
-
 <divclass="large-block-grid-4">
 
 <%= collection_select(:recipients, :id, @recipient, :name, :email, options ={:prompt => "-Select a Email Template"}, :class =>"small secondary radius button dropdown") %>
