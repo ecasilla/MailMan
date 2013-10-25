@@ -1,5 +1,4 @@
 class CampaignMailer < ActionMailer::Base
-  #include Resque::Mailer
 
   def send_blast_user
     binding.pry
@@ -7,10 +6,7 @@ class CampaignMailer < ActionMailer::Base
     current_user.each do |user|
       @recipients[user.email]
     end
-
   end
-
-
  
   def welcome_email(user)
     @user = user

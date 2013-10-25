@@ -3,3 +3,10 @@ Welcome To MailMan
 MailMan is a Web Application Built on Ruby On Rails
 
 I started this project during my time at General Assembly WDI course Fall 13
+
+My Goal was to create a application that allows small businesses to manage there email marketing.
+
+
+
+
+where entrepreneurs can come together as share resources
