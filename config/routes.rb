@@ -2,7 +2,6 @@ Mailman::Application.routes.draw do
   
   root :to => "welcome#index"
   get '/about' => 'welcome#about'
-  get '/contact' => 'welcome#contact'
   
   resources :users, except: [:index] do
     resources :campaigns, shallow: true, except: [:destroy] do
@@ -14,4 +13,5 @@ Mailman::Application.routes.draw do
   end
 
   resource :session, only: [:new, :create, :destroy]
+  resource :contact, only: [:new, :create, :show]
 end

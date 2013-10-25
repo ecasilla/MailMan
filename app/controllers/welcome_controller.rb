@@ -7,14 +7,11 @@ class WelcomeController < ApplicationController
     render :about
   end
 
-  def create
-    @contact_us = ContactUs.new
-    if @contact_us.save
-      flash[:notice] = "We will contact you shortly thanks!"
-      redirect_to root_path
-    else
-      render :contact
-   end
-   
+  private
+
+  def contact_params
+    params.require(:contact).permit(:name, :email,:comment)
   end
+
 end
+
