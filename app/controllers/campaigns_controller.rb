@@ -27,14 +27,18 @@ class CampaignsController < ApplicationController
     #for each recipient id in the list create a new recipient 
     #object save it to the database and push that object back into the view
     if @campaign.recipients.nil?
-      render :edit
-    else
-      params[:campaign][:recipient_ids].each do |recipient_id|
-        if recipient_id != ""
+      else
+        params[:campaign][:recipient_ids].each do |recipient_id|
+      if recipient_id != ""
         @campaign.recipients << Recipient.find(recipient_id)
+          redirect_to campaign_path(@campaign)
         end
       end
     end
+  end
+
+  def send_email
+    @campaign = CampaignMailer.send_blast.deliver(campaigns_params) 
   end
 
   private

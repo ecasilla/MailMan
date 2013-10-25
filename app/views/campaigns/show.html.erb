@@ -1,18 +1,19 @@
 <h1>Campaign: <%= @campaign.name %></h1>
 <%= link_to "Edit Campaign", edit_campaign_path(@campaign) %>
 <br>
-<% if @campaign.email_template %>
+<% if @campaign.email_template %> <br>
   <%= link_to "Edit Template", edit_campaign_email_template_path(@campaign), class: 'button tiny radius' %>
   <br>
 <% else %>
 <br>
   <%= link_to 'Create Template', new_campaign_email_template_path(@campaign), class: 'button tiny radius' %>
 <% end %>
-
+<br>
+<%= link_to 'Start Blasting Emails', campaign_send_email_path(@campaign), class: 'button tiny radius' %>
 
 <h3>Current Recipients:</h3>
 <ul>
   <% @campaign.recipients.each do |recipient| %>
-    <li><%= recipient.email %></li>
+    <li class="recipient_email"><%= recipient.email %></li>
   <% end %>
 </ul>
