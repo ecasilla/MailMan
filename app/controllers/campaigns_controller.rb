@@ -8,8 +8,6 @@ class CampaignsController < ApplicationController
 
   def new
     @campaign = Campaign.new
-    @email_template = EmailTemplate.all
-    @recipients = Recipient.all
   end
 
   def create
@@ -38,7 +36,7 @@ class CampaignsController < ApplicationController
   end
 
   def send_email
-    @campaign = CampaignMailer.send_blast.deliver(campaigns_params) 
+    @campaign = CampaignMailer.send_blast.deliver
   end
 
   private

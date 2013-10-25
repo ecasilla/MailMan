@@ -8,6 +8,7 @@ class WelcomeController < ApplicationController
   end
 
   def contact
+    @contact_us = Contact.create
     render :contact
   end
 end
