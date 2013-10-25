@@ -1,5 +1,5 @@
 class CampaignMailer < ActionMailer::Base
-  include Resque::Mailer
+  #include Resque::Mailer
 
   def send_blast
     

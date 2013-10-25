@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :authenticated!, :set_user, :authorized!, except: [:new, :create]
+  before_action :authenticated!, :set_user, :authorized!, except: [:new, :create,:welcome]
 
   def new
     @user = User.new
@@ -10,8 +10,8 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      CampaignMailer.welcome_email(@user).deliver
       redirect_to user_path(@user)
-      CampaignMailer.welcome_email(current_user).deliver
       #format.html { redirect_to(@user, notice: 'User was successfully created.') }
     else
       render :new
