@@ -2,9 +2,10 @@ class CampaignMailer < ActionMailer::Base
   #include Resque::Mailer
 
   def send_blast_user
+    binding.pry
     @campaign = { }
     current_user.each do |user|
-    @recipients[user.email]
+      @recipients[user.email]
     end
 
   end

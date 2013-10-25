@@ -35,9 +35,6 @@ class CampaignsController < ApplicationController
     end
   end
 
-  def send_email
-    @campaign = CampaignMailer.send_blast.deliver
-  end
 
   private
 

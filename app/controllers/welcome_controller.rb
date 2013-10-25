@@ -7,7 +7,7 @@ class WelcomeController < ApplicationController
     render :about
   end
 
-  def contact
+  def create
     @contact_us = ContactUs.new
     if @contact_us.save
       flash[:notice] = "We will contact you shortly thanks!"
