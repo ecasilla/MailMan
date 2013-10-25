@@ -1,6 +1,6 @@
-Welcome To MailMan
+# Welcome To MailMan
 
-MailMan is a Web Application Built on Ruby On Rails
+## MailMan is a Web Application Built on Ruby On Rails
 
 I started this project during my time at General Assembly WDI course Fall 13
 
@@ -10,11 +10,14 @@ My Goal was to make an app that was geared towards serving the small business co
 
 It was a very ambitous project to tackle with only a week to deadline to implement. But within this week thanks to some really amazing frameworks i was able to leverage their power to implement a foundation for what i want this project to eventually become.
 
-Framework List
-Rails
-Foundation(Zurb)
+### Framework List
+* Rails
+* Foundation(Zurb)
 
-Gems
-pg 
-bcrypt-ruby
+### Gems
+* pg 
+* bcrypt-ruby
+
+
+
 
