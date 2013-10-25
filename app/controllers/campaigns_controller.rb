@@ -22,16 +22,9 @@ class CampaignsController < ApplicationController
   end
 
   def update
-    #for each recipient id in the list create a new recipient 
-    #object save it to the database and push that object back into the view
-    if @campaign.recipients.nil?
-      else
-        params[:campaign][:recipient_ids].each do |recipient_id|
-      if recipient_id != ""
-        @campaign.recipients << Recipient.find(recipient_id)
-          redirect_to campaign_path(@campaign)
-        end
-      end
+    params[:campaign][:recipient_ids].select(&:present?).each do |recipient_id|
+      @campaign.recipients << Recipient.find(recipient_id)
+      redirect_to campaign_path(@campaign)
     end
   end
 
