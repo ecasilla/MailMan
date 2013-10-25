@@ -1,6 +1,0 @@
-<%= form_for @about, method: :post, url: about_path do |f| %>
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
-  Comment: <%= f.text_area :comment %>
- <%= f.submit "Submit" , class: "button radius"  %>
-<% end %>

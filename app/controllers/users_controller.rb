@@ -12,7 +12,6 @@ class UsersController < ApplicationController
     if @user.save
       CampaignMailer.welcome_email(@user).deliver
       redirect_to user_path(@user)
-      #format.html { redirect_to(@user, notice: 'User was successfully created.') }
     else
       render :new
     end
