@@ -17,7 +17,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: mailman_development
+  database: mailman2_development
   pool: 5
   username: ecasilla
   password:

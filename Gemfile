@@ -40,8 +40,7 @@ end
 
 gem 'rails_12factor', group: :production
 
-gem 'resque' # or a compatible alternative / fork
-gem 'resque_mailer'
+
 
 group :development do
   gem 'better_errors'
@@ -50,11 +49,7 @@ group :development do
   gem 'pry'
 end
 
-gem 'textacular', '~> 3.0'
 
-gem "gatling_gun"
-
-gem 'twilio-ruby'
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
 
