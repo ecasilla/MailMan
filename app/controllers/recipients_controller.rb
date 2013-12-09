@@ -9,7 +9,6 @@ class RecipientsController < ApplicationController
   def create
     @recipient = Recipient.new(recipient_params)
     @recipient.user = @user
-
     if @recipient.save
       redirect_to user_recipients_path(@user)
     else
