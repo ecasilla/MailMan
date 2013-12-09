@@ -12,11 +12,6 @@ class Recipient < ActiveRecord::Base
   end
  end
 
-
- 
-# The phrase on the left side of the @@ is being converted to a tsvector 
-# while the phrase on the right is converted to a plain tsquery. 
-
  def self.text_search(query)
   if query.present?
      search(query)
