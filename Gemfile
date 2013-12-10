@@ -40,11 +40,18 @@ end
 
 gem 'rails_12factor', group: :production
 
-group :development do
-  gem 'better_errors'
-  gem 'binding_of_caller'
-  gem 'meta_request'
-  gem 'pry'
+group :development, :test do
+  gem 'jasmine-core', github: 'pivotal/jasmine'
+  gem 'jasmine', github: 'pivotal/jasmine-gem'
+  gem 'rspec-rails'
+  gem 'pry-rails'
+  gem 'factory_girl_rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'launchy'
 end
 
 
