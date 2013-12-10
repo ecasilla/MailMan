@@ -25,7 +25,11 @@ gem 'letter_opener', :group => :development
 
 gem 'carrierwave'
 
+gem "backaid", "~> 0.1.9"
+
 gem 'zurb-foundation'
+
+gem 'aws-sdk', '~> 1.0'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
