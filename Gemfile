@@ -31,6 +31,8 @@ gem 'zurb-foundation'
 
 gem 'aws-sdk', '~> 1.0'
 
+gem 'therubyracer', :group => :assets
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 
@@ -66,7 +68,7 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # gem 'unicorn'
 
 # Use Capistrano for deployment
-# gem 'capistrano', group: :development
+ gem 'capistrano', group: :development
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
