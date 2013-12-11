@@ -27,6 +27,8 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem "backaid", "~> 0.1.9"
 
+gem 'handlebars_assets'
+
 gem 'zurb-foundation'
 
 gem 'aws-sdk', '~> 1.0'
