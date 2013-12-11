@@ -8,14 +8,14 @@ development:
   password:
   host: "localhost"
 
-#   test:
-#   adapter: postgresql
-#   encoding: unicode
-#   database: mailman_test
-#   pool: 5
-#   username: ecasilla
-#   password:
-#   host: "localhost"
+  test:
+  adapter: postgresql
+  encoding: unicode
+  database: mailman_test
+  pool: 5
+  username: ecasilla
+  password:
+  host: "localhost"
 
 # production:
 #   adapter: postgresql
