@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :recipients
   has_many :campaigns
   has_secure_password
+  has_attached_file :recipients
 
   def send_welcome_email                                                        
      UserMailer.welcome_email(self).deliver                                     

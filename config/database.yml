@@ -8,17 +8,19 @@ development:
   password:
   host: "localhost"
 
-  adapter: postgresql
-  encoding: unicode
-  database: mailman_test
-  pool: 5
-  username: mailman
-  password:
+#   test:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: mailman_test
+#   pool: 5
+#   username: ecasilla
+#   password:
+#   host: "localhost"
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: mailman_production
-  pool: 5
-  username: mailman
-  password:
+# production:
+#   adapter: postgresql
+#   encoding: unicode
+#   database: mailman_production
+#   pool: 5
+#   username: ecasilla
+#   password:
