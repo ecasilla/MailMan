@@ -23,7 +23,7 @@ gem 'jquery-rails'
 
 gem 'letter_opener', :group => :development
 
-gem 'carrierwave'
+gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem "backaid", "~> 0.1.9"
 
@@ -58,6 +58,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'launchy'
+  gem 'shoulda-matchers'
 end
 
 

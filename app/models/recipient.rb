@@ -4,8 +4,6 @@ class Recipient < ActiveRecord::Base
   has_many :campaigns
   belongs_to :user
 
-  mount_uploader :recipients, RecipientsUploader
-
   def self.import(file)
     CSV.foreach(file.path, headers: true,:skip_blanks => true) do |row|
     Recipent.create! row.to_hash
