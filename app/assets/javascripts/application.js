@@ -16,10 +16,12 @@
 //= require turbolinks
 //= require underscore
 //= require backbone
+//= require handlebars
 //= require_tree ./backbone/models
 //= require_tree ./backbone/collections
 //= require_tree ./backbone/templates
 //= require_tree ./backbone/views
 //= require_tree ./backbone/routers
+
 
 $(function(){ $(document).foundation(); });
