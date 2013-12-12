@@ -1,5 +1,5 @@
 <%= form_for @recipient, method: :post, url: user_recipients_path(current_user) do |f| %>
   Name: <%= f.text_field :name %>
   Email: <%= f.text_field :email %>
- <%= f.submit "Submit" , class: "button radius"  %>
+ <%= f.submit "Submit" , class: "button"  %>
 <% end %>

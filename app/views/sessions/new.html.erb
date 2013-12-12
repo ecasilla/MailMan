@@ -1,11 +1,11 @@
 
 <%= form_tag session_path, :method => :post , class: 'new_session' do %>
-<div class="inputWrapper">
+<div class=".form-inline">
   <%= label_tag 'email', 'Email' %>
   <%= email_field_tag :email %>
 
   <%= label_tag 'password', 'Password' %>
   <%= password_field_tag :password %>
 </div>
-<%= submit_tag 'Sign In', class: "button radius" %>
+<%= submit_tag 'Sign In', class: "btn btn-primary" %>
 <% end %>

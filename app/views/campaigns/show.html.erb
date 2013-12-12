@@ -2,14 +2,14 @@
 <%= link_to "Edit Campaign", edit_campaign_path(@campaign) %>
 <br>
 <% if @campaign.email_template %> <br>
-  <%= link_to "Edit Template", edit_campaign_email_template_path(@campaign), class: 'button tiny radius' %>
+  <%= link_to "Edit Template", edit_campaign_email_template_path(@campaign), class: 'button' %>
   <br>
 <% else %>
 <br>
-  <%= link_to 'Create Template', new_campaign_email_template_path(@campaign), class: 'button tiny radius' %>
+  <%= link_to 'Create Template', new_campaign_email_template_path(@campaign), class: 'button' %>
 <% end %>
 <br>
-<%= link_to 'Start Blasting Emails', campaign_send_email_path(@campaign), class: 'button tiny radius' %>
+<%= link_to 'Start Blasting Emails', campaign_send_email_path(@campaign), class: 'button' %>
 
 <h3>Current Recipients:</h3>
 <ul>
