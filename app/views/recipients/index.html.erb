@@ -9,8 +9,9 @@
   </thead>
   <% @recipients.each do |recipient| %>
     <tr> 
-      <td><%= recipient.name%></td>
-      <td><%= recipient.email%></td>
+      <td><%= recipient.first_name %></td>
+      <td><%= @recipent.last_name %></td>
+      <td><%= recipient.email %></td>
     </tr>
   <% end %>
   </tbody>
