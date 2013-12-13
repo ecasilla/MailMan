@@ -8,6 +8,7 @@ class EmailTemplatesController < ApplicationController
   end
 
   def new
+
     @email_template = EmailTemplate.new
     @user
   end
@@ -28,6 +29,7 @@ class EmailTemplatesController < ApplicationController
 
   def update
     if @email_template.update_attributes(template_params)
+      binding.pry
       redirect_to campaign_path(@campaign)
     else
       render :edit

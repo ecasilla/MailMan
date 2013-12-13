@@ -73,5 +73,42 @@ $( document ).ready(function() {
   }
   $("#editor").on("keyup", refresh);
   $(".btn-group").on("click", refresh);
+
+  $("form.new_email_template").on("submit", function(e) {
+    // prevent the submit by writing this callback that prevents the default,
+    // then removing this callback from future submits,
+    // then submitting again (which will trigger the default action!)
+    e.preventDefault();
+    $("form.new_email_template").off();
+    
+    // copy the html as a string from div.rendered
+    var htmlAsString = $("div.rendered").html();
+
+    // create a new form input
+    var newInput = $("<input>").attr({
+        id: "email_template_body",
+        name: "email_template[body]",
+        type: "textarea"
+      }).css("display", "none").val( htmlAsString );
+
+    // append the new input to the form
+    $("form.new_email_template").append( newInput );
+
+    $('form.new_email_template').submit();
+  });
+
+$( "#first_name" ).click(function() {
+  $('#editor').append("<%%=first_name%>");
+});
+$( "#last_name" ).click(function() {
+  $('#editor').append("<%%=last_name%>");
+});
+$( "#email" ).click(function() {
+  $('#editor').append("<%%=email%>");
+});
+$( "#phone" ).click(function() {
+  $('#editor').append("<%%=phone%>");
+});
+
 });
 

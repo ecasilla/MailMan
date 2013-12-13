@@ -1,5 +1,7 @@
 <%= form_for @recipient, method: :post, url: user_recipients_path(current_user) do |f| %>
-  Name: <%= f.text_field :name %>
-  Email: <%= f.text_field :email %>
- <%= f.submit "Submit" , class: "button"  %>
+  <%= f.text_field :first_name, :placeholder=> "First Name" %>
+  <%= f.text_field :last_name, :placeholder=> "Last Name" %>
+  <%= f.text_field :email, :placeholder=> "Email" %>
+  <%= f.text_field :phone, :placeholder=> "Phone" %>
+ <%= f.submit "Save" , class: "btn btn-primary"  %>
 <% end %>

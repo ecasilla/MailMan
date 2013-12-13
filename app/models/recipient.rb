@@ -1,6 +1,6 @@
 class Recipient < ActiveRecord::Base
   validates :email, presence: true, uniqueness: true
-  validates :name, presence: true
+  validates :first_name,:last_name, presence: true
   has_many :campaigns
   belongs_to :user
 

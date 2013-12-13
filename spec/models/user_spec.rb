@@ -5,7 +5,14 @@ describe User do
     it {should validate_presence_of(:email)}
     it {should validate_presence_of(:password)} 
   end
-  it "should description" do
-    
+describe "Create New Campaign" do
+  before do
+    FactoryGirl.create(:user)
+    FactoryGirl.create(:campaigns)
+    user.campaigns.create
   end
+  it "should add a new Campaign" do
+    expect(user.campaign).to_not eq(nil) 
+  end
+end
 end
