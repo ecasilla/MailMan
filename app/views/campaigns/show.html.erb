@@ -13,7 +13,10 @@
 
 <h3>Current Recipients:</h3>
 <ul>
-  <% @campaign.recipients.each do |recipient| %>
+  <% @campaign.recipients.uniq.each do |recipient| %>
     <li class="recipient_email"><%= recipient.email %></li>
+    <li class="recipient_email"><%= recipient.first_name %></li>
+    <li class="recipient_email"><%= recipient.last_name %></li>
+    <li class="recipient_email"><%= recipient.phone %></li>
   <% end %>
 </ul>

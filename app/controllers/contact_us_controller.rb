@@ -1,5 +1,4 @@
 class ContactUsController < ApplicationController
-  binding.pry
   def new
     @contact_us = ContactUs.new
   end

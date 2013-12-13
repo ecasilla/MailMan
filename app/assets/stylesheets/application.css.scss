@@ -6,6 +6,9 @@
  *= require font-awesome
  *= require_tree .
 */
+form.edit_campaign #edit_campaign{
+  margin: auto 0px;
+}
 
 body{
   max-width: 1600px;

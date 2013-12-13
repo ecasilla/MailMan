@@ -12,6 +12,6 @@ class EmailTemplate < ActiveRecord::Base
 
   # to return a copy of the template parsed to a specific recipient
   def parse_according_to(recipient)
-    self.body.gsub( /<%=[\s\S]*%>/, "!!!!" ) + "  (((#{recipient.first_name}555 "
+    #.gsub( /<%=[\s\S]*%>/, "!!!!" ) + "  (((#{recipient.first_name}555 "
   end
 end
