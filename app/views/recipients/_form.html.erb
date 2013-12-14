@@ -1,4 +1,5 @@
 <%= form_for @recipient, method: :post, url: user_recipients_path(current_user) do |f| %>
+<%= f.file_field :recipient, class: "btn" %>
   <%= f.text_field :first_name, :placeholder=> "First Name" %>
   <%= f.text_field :last_name, :placeholder=> "Last Name" %>
   <%= f.text_field :email, :placeholder=> "Email" %>
