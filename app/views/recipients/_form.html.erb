@@ -1,8 +1,8 @@
 <%= form_for @recipient, method: :post, url: user_recipients_path(current_user) do |f| %>
 <%= f.file_field :recipient, class: "btn" %>
-  <%= f.text_field :first_name, :placeholder=> "First Name" %>
-  <%= f.text_field :last_name, :placeholder=> "Last Name" %>
-  <%= f.text_field :email, :placeholder=> "Email" %>
-  <%= f.text_field :phone, :placeholder=> "Phone" %>
- <%= f.submit "Save" , class: "btn btn-primary"  %>
+  <%= f.text_field :first_name, class: "form-horizontal", :placeholder=> "First Name" %>
+  <%= f.text_field :last_name, class: "form-horizontal", :placeholder=> "Last Name" %>
+  <%= f.text_field :email, class: "form-horizontal", :placeholder=> "Email" %>
+  <%= f.text_field :phone, class: "form-horizontal", :placeholder=> "Phone" %>
+ <%= f.submit "Save" , class: "btn btn-primary form-horizontal"  %>
 <% end %>
