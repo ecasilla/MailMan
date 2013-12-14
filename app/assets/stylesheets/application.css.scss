@@ -67,6 +67,7 @@ body{
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
+  margin-left: 20px;
   margin-bottom: 30px;
   padding-bottom: 60px;
   padding-left: 60px;
@@ -91,11 +92,16 @@ body{
 }
 
 .navbar-inverse {
+  border-color: rgba(0,0,0, 0.7) !important;
   background-color: rgba(0,0,0, 0.7) !important;  
 }
 
 .nav-text a {
     cursor: default !important;
+}
+
+.navbar-brand{
+  margin-right: 48.000em; 
 }
 
 .nav-text a:hover {
@@ -118,15 +124,25 @@ div[data-role="editor-toolbar"] {
   cursor: pointer;
 }
 
+input#email_template_name{
+  margin: 20px;
+}
+
 form.new_email_template, form.update_email_template {
   width: 50%;
   min-width: 500px;
   max-width: 50%;
 }
 
-#template-submit{
-  margin: 10px;
+div.wysiwyg div.btn-group{
   padding: 5px;
+  margin: 5px;
+  background-color: rgb(238, 238, 238);
+}
+
+#template-submit{
+  margin: 20px;
+  position: absolute;
 }
 
 @import "bootstrap";

@@ -19,9 +19,9 @@
       <%end %>
       
     <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Create Campaign",new_user_campaign_path( current_user ) %></li>
+          <li><%= link_to "Email Campaigns",user_campaigns_path( current_user ) %></li>
           <li><%= link_to "Contacts", user_recipients_path(current_user) %></li>
-          <li><%= link_to "About Us", about_path %></li>
+          <li><%= link_to "About Us", about_path, id: "AboutUs",:data => {:toggle => "modal"} %></li>
           <% if current_user %>
               <li><%= link_to "Sign out", session_path, :method => :delete %></li>
           <% else %>

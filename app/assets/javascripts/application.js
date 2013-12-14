@@ -97,18 +97,20 @@ $( document ).ready(function() {
     $('form.new_email_template').submit();
   });
 
-$( "#first_name" ).click(function() {
-  $('#editor').append("<%%=first_name%>");
-});
-$( "#last_name" ).click(function() {
-  $('#editor').append("<%%=last_name%>");
-});
-$( "#email" ).click(function() {
-  $('#editor').append("<%%=email%>");
-});
-$( "#phone" ).click(function() {
-  $('#editor').append("<%%=phone%>");
-});
+  $( "#first_name" ).click(function() {
+    $('#editor').append("<%%=first_name%>");
+  });
+  $( "#last_name" ).click(function() {
+    $('#editor').append("<%%=last_name%>");
+  });
+  $( "#email" ).click(function() {
+    $('#editor').append("<%%=email%>");
+  });
+  $( "#phone" ).click(function() {
+    $('#editor').append("<%%=phone%>");
+  });
+
+  
 
 });
 
