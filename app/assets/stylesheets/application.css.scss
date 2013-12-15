@@ -5,8 +5,8 @@
  *= require_self
  *= require font-awesome
  *= require_tree .
-*/
-form.edit_campaign #edit_campaign{
+ */
+ form.edit_campaign #edit_campaign{
   margin: auto 0px;
 }
 
@@ -117,7 +117,7 @@ body{
 }
 
 .nav-text a {
-    cursor: default !important;
+  cursor: default !important;
 }
 
 .form-horizontal {
@@ -137,12 +137,12 @@ a.SignIn {
 }
 
 .nav-text a:hover {
-    color: #999999 !important;
+  color: #999999 !important;
 }
 
 .navbar-inverse, .navbar, .navbar-default{
-    position: relative !important;
-    width: 100% !important;
+  position: relative !important;
+  width: 100% !important;
 }
 
 div[data-role="editor-toolbar"] {

@@ -31,16 +31,16 @@ $( document ).ready(function() {
   $(function(){
     function initToolbarBootstrapBindings() {
       var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier', 
-            'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
-            'Times New Roman', 'Verdana'],
-            fontTarget = $('[title=Font]').siblings('.dropdown-menu');
+      'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
+      'Times New Roman', 'Verdana'],
+      fontTarget = $('[title=Font]').siblings('.dropdown-menu');
       $.each(fonts, function (idx, fontName) {
-          fontTarget.append($('<li><a data-edit="fontName ' + fontName +'" style="font-family:\''+ fontName +'\'">'+fontName + '</a></li>'));
+        fontTarget.append($('<li><a data-edit="fontName ' + fontName +'" style="font-family:\''+ fontName +'\'">'+fontName + '</a></li>'));
       });
       $('a[title]').tooltip({container:'body'});
       $('.dropdown-menu input').click(function() {return false;})
-        .change(function () {$(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');})
-        .keydown('esc', function () {this.value='';$(this).change();});
+      .change(function () {$(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');})
+      .keydown('esc', function () {this.value='';$(this).change();});
 
       $('[data-role=magic-overlay]').each(function () { 
         var overlay = $(this), target = $(overlay.data('target')); 
@@ -52,29 +52,29 @@ $( document ).ready(function() {
       } else {
         $('#voiceBtn').hide();
       }
-  };
-  function showErrorAlert (reason, detail) {
-    var msg='';
-    if (reason==='unsupported-file-type') { msg = "Unsupported format " +detail; }
-    else {
-      console.log("error uploading file", reason, detail);
-    }
-    $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>'+ 
-     '<strong>File upload error</strong> '+msg+' </div>').prependTo('#alerts');
-  };
-  initToolbarBootstrapBindings();  
-  
-  $('#editor').wysiwyg({ fileUploadError: showErrorAlert} );
+    };
+    function showErrorAlert (reason, detail) {
+      var msg='';
+      if (reason==='unsupported-file-type') { msg = "Unsupported format " +detail; }
+      else {
+        console.log("error uploading file", reason, detail);
+      }
+      $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>'+ 
+       '<strong>File upload error</strong> '+msg+' </div>').prependTo('#alerts');
+    };
+    initToolbarBootstrapBindings();  
+    
+    $('#editor').wysiwyg({ fileUploadError: showErrorAlert} );
     window.prettyPrint && prettyPrint();
   });
-  
-  function refresh() {
-    $(".rendered").html( $("#editor").html() );
-  }
-  $("#editor").on("keyup", refresh);
-  $(".btn-group").on("click", refresh);
 
-  $("form.new_email_template").on("submit", function(e) {
+function refresh() {
+  $(".rendered").html( $("#editor").html() );
+}
+$("#editor").on("keyup", refresh);
+$(".btn-group").on("click", refresh);
+
+$("form.new_email_template").on("submit", function(e) {
     // prevent the submit by writing this callback that prevents the default,
     // then removing this callback from future submits,
     // then submitting again (which will trigger the default action!)
@@ -86,10 +86,10 @@ $( document ).ready(function() {
 
     // create a new form input
     var newInput = $("<input>").attr({
-        id: "email_template_body",
-        name: "email_template[body]",
-        type: "textarea"
-      }).css("display", "none").val( htmlAsString );
+      id: "email_template_body",
+      name: "email_template[body]",
+      type: "textarea"
+    }).css("display", "none").val( htmlAsString );
 
     // append the new input to the form
     $("form.new_email_template").append( newInput );
@@ -97,20 +97,20 @@ $( document ).ready(function() {
     $('form.new_email_template').submit();
   });
 
-  $( "#first_name" ).click(function() {
-    $('#editor').append("<%%=first_name%>");
-  });
-  $( "#last_name" ).click(function() {
-    $('#editor').append("<%%=last_name%>");
-  });
-  $( "#email" ).click(function() {
-    $('#editor').append("<%%=email%>");
-  });
-  $( "#phone" ).click(function() {
-    $('#editor').append("<%%=phone%>");
-  });
+$( "#first_name" ).click(function() {
+  $('#editor').append("<%%=first_name%>");
+});
+$( "#last_name" ).click(function() {
+  $('#editor').append("<%%=last_name%>");
+});
+$( "#email" ).click(function() {
+  $('#editor').append("<%%=email%>");
+});
+$( "#phone" ).click(function() {
+  $('#editor').append("<%%=phone%>");
+});
 
-  
+
 
 });
 
