@@ -2,6 +2,10 @@ Mailman::Application.routes.draw do
   
   root :to => "welcome#index"
   get '/about' => 'welcome#about'
+
+  namespace :api do
+      resources :campaigns
+  end
   
   resources :users, except: [:index] do
     resources :campaigns, shallow: true, except: [:destroy] do

@@ -4,7 +4,11 @@ class ApiController < ApplicationController
 # Actions omitted
 
   def get
-
+  @campaign = User.campaign.all
+  respond_to do |format|
+    format.html
+    format.json { render json: @campaign }
+  end
   end
 
   def add
