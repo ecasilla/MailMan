@@ -1,4 +1,4 @@
-<%= form_for @email_template, :url => ( @email_template.body.nil? ? campaign_email_template_path(@campaign) : edit_campaign_email_template_path(@campaign).gsub("/edit","")) do |f| %>
+<%= form_for @email_template, :url => ( @email_template.body.nil? ? campaign_email_template_path(@campaign) : edit_campaign_email_template_path(@campaign).gsub("/edit","")), :html => {:class => "email-template" } do |f| %>
 <%= f.text_field :name,:placeholder => "Template Name" %>
 
 <div class="wysiwyg">
@@ -81,7 +81,7 @@
           <i class="fa fa-code"></i></a>
 </div>
 
-<div id="editor"></div>
+<div id="editor"><%= @email_template.body.html_safe %></div>
 
  <%= f.submit "Save" ,class: "btn btn-primary", id:"template-submit" %>
 

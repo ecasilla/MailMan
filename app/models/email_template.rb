@@ -2,8 +2,7 @@ class EmailTemplate < ActiveRecord::Base
   belongs_to :campaign
   validates :name, :body, presence: true
 
-  binding.pry
-  before_create parse_according_to(instance)
+  #before_create parse_according_to(instance)
 
   def instance
     temp = self.find_by(id: self.id)

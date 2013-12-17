@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery.hotkeys
 //= require jquery_ujs
-//= require turbolinks
 //= require underscore
 //= require backbone
 //= require handlebars
@@ -74,15 +73,15 @@ function refresh() {
 $("#editor").on("keyup", refresh);
 $(".btn-group").on("click", refresh);
 
-$("form.new_email_template").on("submit", function(e) {
+$("form.email-template").on("submit", function(e) {
     // prevent the submit by writing this callback that prevents the default,
     // then removing this callback from future submits,
     // then submitting again (which will trigger the default action!)
     e.preventDefault();
-    $("form.new_email_template").off();
+    $(this).off();
     
     // copy the html as a string from div.rendered
-    var htmlAsString = $("div.rendered").html();
+    var htmlAsString = $("div#editor").html();
 
     // create a new form input
     var newInput = $("<input>").attr({
@@ -92,9 +91,9 @@ $("form.new_email_template").on("submit", function(e) {
     }).css("display", "none").val( htmlAsString );
 
     // append the new input to the form
-    $("form.new_email_template").append( newInput );
+    $(this).append( newInput );
 
-    $('form.new_email_template').submit();
+    $(this).submit();
   });
 
 $( "#first_name" ).click(function() {
