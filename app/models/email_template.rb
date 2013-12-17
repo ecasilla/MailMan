@@ -2,7 +2,7 @@ class EmailTemplate < ActiveRecord::Base
   belongs_to :campaign
   validates :name, :body, presence: true
 
-  #before_create parse_according_to(instance)
+  before_create :parse
 
   def instance
     temp = self.find_by(id: self.id)
@@ -18,9 +18,9 @@ class EmailTemplate < ActiveRecord::Base
   end
 
   # to return a copy of the template parsed to a specific recipient
-  def parse_according_to(template)
+  def parse
     unparsed = self.scan(/^|first_name|last_name|email|phone|\s/)
-    return subbed_exp(unparsed)
+    return self.subbed_exp(unparsed)
   end  
   #parsed returns the body of the email template where the Regex finds a match 
   #search for the campaigns recipients and for each replace any custom 

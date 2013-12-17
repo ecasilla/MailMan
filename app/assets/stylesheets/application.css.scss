@@ -160,10 +160,11 @@ input#email_template_name{
   margin: 20px;
 }
 
-form.new_email_template, form.update_email_template {
+form.new_email_template, form.edit_email_template {
   width: 50%;
   min-width: 500px;
   max-width: 50%;
+  overflow: hidden;
 }
 
 div.wysiwyg div.btn-group{

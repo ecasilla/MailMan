@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   # validates_attachment_content_type :csv, :content_type =&gt; ['text/csv','text/comma-separated-values','text/csv','application/csv','application/excel','application/vnd.ms-excel','application/vnd.msexcel','text/anytext','text/plain']
 
 
-  #after_create create_api_key
+  before_create :create_api_key
   #after_create send_welcome_email
 
   def send_welcome_email                                                        

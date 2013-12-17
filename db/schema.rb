@@ -18,8 +18,8 @@ ActiveRecord::Schema.define(version: 20131215044535) do
 
   create_table "api_keys", force: true do |t|
     t.string   "access_token"
-    t.integer  "users_id",                            null: false
-    t.date     "expires_at",   default: '2014-12-16'
+    t.integer  "user_id",                             null: false
+    t.date     "expires_at",   default: '2014-12-17'
     t.datetime "created_at"
     t.datetime "updated_at"
   end
