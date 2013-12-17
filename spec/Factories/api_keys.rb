@@ -2,6 +2,6 @@
 
 FactoryGirl.define do
   factory :api_key do
-    access_token "afbadb4ff8485c0adcba486b4ca90cc4""
+    access_token "afbadb4ff8485c0adcba486b4ca90cc4"
   end
 end

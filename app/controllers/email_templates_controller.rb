@@ -29,7 +29,7 @@ class EmailTemplatesController < ApplicationController
     if @email_template.update_attributes(template_params)
       redirect_to campaign_path(@campaign)
     else
-      render :edit
+      render (@email_template.body)
     end
   end
 end
