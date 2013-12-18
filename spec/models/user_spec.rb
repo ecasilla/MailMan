@@ -8,7 +8,7 @@ describe User do
   describe "Create New Campaign" do
     before do
       FactoryGirl.create(:user)
-      FactoryGirl.create(:campaign, email: "blah@shmee.com")
+      FactoryGirl.create(:campaign)
       user.campaigns.create
     end
     it "should add a new Campaign" do

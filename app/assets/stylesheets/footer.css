@@ -1,22 +1,16 @@
 /* --------------------------------------------------------------------------------- */
 /* Footer
 /* --------------------------------------------------------------------------------- */
-.footer {  
-  display: block;
-  clear: both;
-}
-.footer-container {
-  display: block;
-  width: 100%;
-}
 
 .footer-container {
+  display: block;
   width: 100%;
+  bottom: 0px !important;
 }
-footer{
-  margin-top: 20px;
-}
+
 .footer {
+  display: block;
+  bottom: 0px !important;
   top:-20px;
   padding: 46px 0 30px 0;
   font-size: 11px;
@@ -34,14 +28,11 @@ footer{
   display: block;
   float: left;
   width: 100%;
+  bottom: 0px !important;
 }
 
 .footer-lower-container {
   border-top: 1px solid #dadada;
-}
-.footer-lower li {
-  float: left;
-  margin-right: 25px;
 }
 
 .footer-lower li a {
@@ -60,8 +51,6 @@ footer{
 .footer-copyright a {
   color: #2c7ebe;
 }
-
-
 /* --------------------- 
 /* Footer Infobar
 /* --------------------- */

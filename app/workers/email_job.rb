@@ -15,3 +15,5 @@ module SendBackgroundEmail
     end
   end
 end
+
+#To Send Email I Need A Recipient A Template And A Campaign

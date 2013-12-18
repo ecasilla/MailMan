@@ -28,6 +28,7 @@
 /* -------------------------------- */
 .topbar-outer.dark {
   background-color: #1b222e;
+  top:0px;
 }
 body.home .topbar-outer.dark {
   background-color: #1b222e;
@@ -36,12 +37,15 @@ body.home .topbar-outer.dark {
 /* Logo
 /* -------------------------------- */
 .logo {
+  display: -webkit-inline-box;
+  clear: right;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 22px;
   font-weight: 800; /* Ultra Bold */
   color: #1b222e;
   margin-right: 20px;
   letter-spacing: -1px;
+  background-image:url("/app/assets/images/logos/logo.png"); 
 }
 .logo a {
   color: #1b222e;
