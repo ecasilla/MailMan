@@ -47,4 +47,4 @@ class EmailTemplate < ActiveRecord::Base
     end
   end   
 end
-#:url => campaign_email_template_path(@campaign)
+
