@@ -4,8 +4,13 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require font-awesome
+ *= reuire styles.css
  *= require_tree .
  */
+
+.sep{
+margin-bottom: 100px;
+}
 
 .apiToken{
   float: right;
@@ -19,11 +24,6 @@
 
  form.edit_campaign #edit_campaign{
   margin: auto 0px;
-}
-
-div.main{
-  background-image: url("http://live.bobosh.com/hostium/img/intro.png");
-  background-color: rgba(0,0,0, 0.7);
 }
 
 body{
@@ -147,15 +147,6 @@ body{
   -webkit-box-shadow: none;
 }
 
-.navbar-inverse {
-  border-color: rgba(0,0,0, 0.7) !important;
-  background-color: rgba(0,0,0, 0.7) !important;  
-}
-
-.nav-text a {
-  cursor: default !important;
-}
-
 .form-horizontal {
   margin: 14px;
   display: block;
@@ -165,20 +156,6 @@ body{
 a.SignIn {
   margin: 15px;
   padding: 10px;
-}
-
-
-.navbar-brand{
-  margin-right: 48.000em; 
-}
-
-.nav-text a:hover {
-  color: #999999 !important;
-}
-
-.navbar-inverse, .navbar, .navbar-default{
-  position: relative !important;
-  width: 100% !important;
 }
 
 div[data-role="editor-toolbar"] {

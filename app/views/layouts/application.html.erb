@@ -21,9 +21,13 @@
     <%= csrf_meta_tags %>
   </head>
 
-  <%= render 'layouts/test' %>
+  <%= render 'layouts/header' %>
+  <divclass="sep"></div>
+
+
 
   <%= yield %>
     <%= javascript_include_tag "application" %>
+      <%= render 'layouts/footer' %>
   </body>
 </html>
