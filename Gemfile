@@ -65,6 +65,7 @@ group :test do
   gem 'launchy'
   gem 'shoulda-matchers'
   gem 'simplecov', :require => false 
+  gem 'nyan-cat-formatter'
 end
 
 
