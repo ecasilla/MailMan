@@ -54,7 +54,7 @@ body.home .topbar-outer.dark {
   float: left;
 }
 .topsocial li {
-  top: -10px;
+  top: -25px;
   list-style: none;
   padding-right: 10px;
   vertical-align: middle;
@@ -76,11 +76,10 @@ body.home .topbar-outer.dark {
 /* Top Bar Navigation
 /* --------------------------------------------------------------------------------- */
 .topnav {
- /* display: table;*/
   float: right;
 }
 .topnav li {
-  top: -20px;
+  top: -40px;
   list-style: none;
   display: block;
   float: left;
@@ -116,21 +115,16 @@ body.home .topbar-outer.dark {
 }
 .topbar-outer.dark .topnav li a.current {
   color: #ffffff;
-  /*opacity: 1;*/
 }
 .topbar-outer.dark .topnav li a:hover {
   color: #ffffff;
-  /*opacity: 1;*/
 }
 .topbar-outer.dark .topnav li a.drop:after {
   color: #ffffff;
-  /*opacity: 0.7;*/
 }
 .topbar-outer.dark .topnav li a.drop.current:after {
   color: #ffffff;
-  /*opacity: 1;*/
 }
 .topbar-outer.dark .topnav li a.drop:hover:after {
   color: #ffffff;
-  /*opacity: 1;*/
 }

@@ -15,6 +15,12 @@ class CampaignsController < ApplicationController
     redirect_to campaign_path(@campaign)
   end
 
+  def send_email
+    Resque.enqueue(SendBackgroundEmail, @user.campaigns.recipients, params)
+    redirect_to root_url, notice: "Email sent"
+  end
+
+
   def show
   end
 

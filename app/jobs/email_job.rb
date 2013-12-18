@@ -12,6 +12,6 @@ module SendBackgroundEmail
       from  from_email
       subject email_subject
       body  email_body
-      end
- end
+    end
+  end
 end
