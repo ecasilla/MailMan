@@ -19,9 +19,6 @@ gem "font-awesome-sass"
 
 gem "resque", "~> 2.0.0.pre.1", github: "resque/resque"
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
 

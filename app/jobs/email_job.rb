@@ -1,6 +1,6 @@
 module SendBackgroundEmail
 
-  @queue = :default
+  @queue = :recipients_blast
 
   def self.perform(from_email, email_params)
     # Code in here is what happens when this executed by the worker

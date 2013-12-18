@@ -6,6 +6,11 @@
   clear: both;
 }
 .footer-container {
+  display: block;
+  width: 100%;
+}
+
+.footer-container {
   width: 100%;
 }
 footer{
@@ -55,6 +60,7 @@ footer{
 .footer-copyright a {
   color: #2c7ebe;
 }
+
 
 /* --------------------- 
 /* Footer Infobar
