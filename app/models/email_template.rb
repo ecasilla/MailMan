@@ -17,6 +17,17 @@ class EmailTemplate < ActiveRecord::Base
     end
   end
 
+#   def parsedwithname(recipient)
+#     self.body.gsub("{{first_name}}", recipient.first_name)
+#     self.body.gsub("{{first_name}}", recipient.first_name)
+#     self.body.gsub("{{first_name}}", recipient.first_name)
+#   end
+
+# recipient.each do |r|
+#   parsedwithname(r)
+# end
+
+
   # to return a copy of the template parsed to a specific recipient
   def parse
     unparsed = self.scan(/^|first_name|last_name|email|phone|\s/)

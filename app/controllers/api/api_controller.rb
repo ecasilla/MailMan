@@ -3,8 +3,8 @@ class ApiController < ApplicationController
   respond_to :json
 # Actions omitted
 
-  def get
-    @access_token = ApiKey.find_by(params [:users_id])
+  def index
+    @access_token = ApiKey.find_by(params [:user_id])
     @campaign = User.campaign.all
       respond_to do |format|
         format.html

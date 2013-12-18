@@ -1,3 +1,4 @@
+<center>
 <%= link_to "Sign Up", new_user_path, class: "SignIn btn btn-primary" %>
 
 <%= form_tag session_path, :method => :post , class: 'form-horizontal' do %>
@@ -8,5 +9,6 @@
   <%= label_tag 'password', 'Password' %>
   <%= password_field_tag :password %>
 
-<%= submit_tag 'Sign In', class: "btn btn-primary form-horizontal" %>
+<%= submit_tag 'Sign In', class: "btn btn-primary SignIn" %>
 <% end %>
+</center>

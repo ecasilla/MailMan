@@ -6,6 +6,17 @@
  *= require font-awesome
  *= require_tree .
  */
+
+.apiToken{
+  float: right;
+  position: relative
+  
+}
+.apiTokenHeader{
+  float: right;
+  margin: 10px;
+}
+
  form.edit_campaign #edit_campaign{
   margin: auto 0px;
 }
@@ -68,9 +79,35 @@ body{
   padding-left: 30px;
   padding-right: 30px;
   padding-top: 30px;
-  width: 40%;
-  position: fixed;
+  width: 45%;
   word-wrap: normal;
+  float: left;
+}
+
+.render-wrapper {
+  height: 320px;
+  width: 45%;
+  float: right;
+}
+
+.editor-wrapper {
+}
+
+.editor-and-render-wrapper {
+}
+.btn.file{
+  margin-left: 100px;
+}
+.about{
+  width: 400px;
+}
+
+.editCampaignBtn{
+  margin-bottom: 20px;
+}
+
+.campaignBtn{
+  margin-top: 10px; 
 }
 
 .rendered {
@@ -88,13 +125,12 @@ body{
   left: 0px;
   line-height: 19px;
   margin-top: 15px;
-  margin-left:900px; 
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow-y: scroll;
   right: 0px;
   top: 40px;
-  width: 600px;
   word-wrap: normal;
+  border-radius: 6px;
+  background-color: #EEEEEE;
 }
 
 #voiceBtn {
@@ -174,11 +210,8 @@ div.wysiwyg div.btn-group{
 }
 
 #template-submit{
-  margin: auto;
-  position: inherit;
-  float: left;
-  display: -webkit-box;
-  margin-bottom: 20px;
+  margin-left: 30px;
+  
 }
 
 @import "bootstrap";

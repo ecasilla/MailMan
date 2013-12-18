@@ -80,12 +80,22 @@
         <a class="btn" data-edit="first_name" title="phone" id="phone">
           <i class="fa fa-code"></i></a>
 </div>
+<div class="editor-and-render-wrapper">
+  <div class="editor-wrapper">
+    <div id="editor">
+      <%= @email_template.body.html_safe unless @email_template.body.nil?  %> 
+    </div>
+  </div>
 
-<div id="editor"><%= @email_template.body.html_safe %></div>
+  <div class="render-wrapper">
+    <p>Below is rendered an example email with the information for Ernie Casilla, Address, etc.</p>
+    <div class="rendered"></div>
+  </div>
+  <div style="clear:both"></div>
+</div>
 
- <%= f.submit "Save" ,class: "btn btn-primary", id:"template-submit" %>
+<%= f.submit "Save", class: "btn btn-primary", id:"template-submit" %>
 
- <div class="rendered"></div>
 <% end %>
 
   

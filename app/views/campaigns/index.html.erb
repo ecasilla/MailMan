@@ -1,11 +1,11 @@
+<center>
 <div>
-
-<ul>
+  <%= link_to "Create Email Campaign", new_user_campaign_path(@user) ,class: "btn btn-primary" %>
+</center>
+<h3>These Are All Your Campiagns</h3>
+<ul class="allCampaigns">
   <% @campaigns.each do |campaign| %>
-    <li><%= link_to campaign.name, campaign_path(campaign) %></li>
+    <%= link_to campaign.name, campaign_path(campaign) %>
   <% end %>
 </ul>
-
 </div>  
-
-<%= link_to "Create Email Campaign", new_user_campaign_path(@user) ,class: "button"%>
