@@ -1,3 +1,4 @@
+require "resque_web"
 Mailman::Application.routes.draw do
   
   root :to => "welcome#index"
@@ -18,4 +19,5 @@ Mailman::Application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
   resource :contact, only: [:new, :create, :show]
+  mount ResqueWeb::Engine => "/resque_web"
 end

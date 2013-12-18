@@ -1,9 +1,10 @@
 <h1>Editing <%= @campaign.name %></h1>
 
-
+<center>
 <h3>Add Recipients</h3>
 <%= form_for @campaign, :url => { :action => "update" } do |f| %>
   <%= f.collection_select(:recipient_ids, current_user.recipients.uniq, :id, :email, {}, multiple: true) %>
   <%= f.submit :save, class: "btn btn-primary" %>
 <% end %>
+</center>
 
