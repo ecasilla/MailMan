@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-12-18T15:48:31-05:00">2013-12-18T15:48:31-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-12-18T16:07:54-05:00">2013-12-18T16:07:54-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">79.59%</span></span>
+    (<span class="covered_percent"><span class="red">73.91%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.87
+         0.81
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>49</b> relevant lines. 
-    <span class="green"><b>39</b> lines covered</span> and
-    <span class="red"><b>10</b> lines missed </span>
+    <b>46</b> relevant lines. 
+    <span class="green"><b>34</b> lines covered</span> and
+    <span class="red"><b>12</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#da78e3f145f721df06a2837909fdbb5df46f810d" class="src_link" title="app/models/email_template.rb">app/models/email_template.rb</a></td>
-        <td class="red strong">76.92 %</td>
-        <td>22</td>
-        <td>13</td>
+        <td class="red strong">50.0 %</td>
+        <td>23</td>
         <td>10</td>
-        <td>3</td>
-        <td>0.8</td>
+        <td>5</td>
+        <td>5</td>
+        <td>0.5</td>
       </tr>
       
       <tr>
@@ -311,11 +311,11 @@
         <div class="source_table" id="da78e3f145f721df06a2837909fdbb5df46f810d">
   <div class="header">
     <h3>app/models/email_template.rb</h3>
-    <h4><span class="red">76.92 %</span> covered</h4>
+    <h4><span class="red">50.0 %</span> covered</h4>
     <div>
-      <b>13</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>10</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -406,49 +406,55 @@
           <code class="ruby">  def parse_according_to(recipient)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">    self.body = self.body.gsub(&quot;{{first_name}}&quot;, recipient.first_name)</code>
+          
+          <code class="ruby">    # self.body = self.body.gsub(&quot;{{first_name}}&quot;, recipient.first_name)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="16">
           
-          <code class="ruby">    self.body = self.body.gsub(&quot;{{last_name}}&quot;,  recipient.last_name)</code>
+          
+          <code class="ruby">    # self.body = self.body.gsub(&quot;{{last_name}}&quot;,  recipient.last_name)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="17">
           
-          <code class="ruby">    self.body = self.body.gsub(&quot;{{email}}&quot;,      recipient.email)</code>
+          
+          <code class="ruby">    # self.body = self.body.gsub(&quot;{{email}}&quot;,      recipient.email)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="18">
-          <span class="hits">1</span>
+        <li class="missed" data-hits="0" data-linenumber="18">
+          
           
           <code class="ruby">    binding.pry</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="19">
           
-          <code class="ruby">    self.body.gsub(&quot;{{  phone  }}&quot;,      recipient.phone)</code>
+          
+          <code class="ruby">    # self.body.gsub(&quot;{{  phone  }}&quot;,      recipient.phone)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="missed" data-hits="0" data-linenumber="20">
           
           
-          <code class="ruby">  end  </code>
+          <code class="ruby">    self.body[&quot;{{phone}}&quot;] = recipient.phone.to_s</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
           
           
-          <code class="ruby">end</code>
+          <code class="ruby">  end  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby"></code>

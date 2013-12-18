@@ -12,11 +12,12 @@ class EmailTemplate < ActiveRecord::Base
 
   # to return a copy of the template parsed to a specific recipient
   def parse_according_to(recipient)
-    self.body = self.body.gsub("{{first_name}}", recipient.first_name)
-    self.body = self.body.gsub("{{last_name}}",  recipient.last_name)
-    self.body = self.body.gsub("{{email}}",      recipient.email)
+    # self.body = self.body.gsub("{{first_name}}", recipient.first_name)
+    # self.body = self.body.gsub("{{last_name}}",  recipient.last_name)
+    # self.body = self.body.gsub("{{email}}",      recipient.email)
     binding.pry
-    self.body.gsub("{{  phone  }}",      recipient.phone)
+    # self.body.gsub("{{  phone  }}",      recipient.phone)
+    self.body["{{phone}}"] = recipient.phone.to_s
   end  
 end
 
