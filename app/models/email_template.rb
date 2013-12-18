@@ -2,7 +2,7 @@ class EmailTemplate < ActiveRecord::Base
   belongs_to :campaign
   validates :name, :body, presence: true
 
-  before_create :parse
+  #before_create :parse
 
   def instance
     temp = self.find_by(id: self.id)
@@ -18,7 +18,7 @@ class EmailTemplate < ActiveRecord::Base
   end
 
 #   def parsedwithname(recipient)
-#     self.body.gsub("{{first_name}}", recipient.first_name)
+#     self.body 
 #     self.body.gsub("{{first_name}}", recipient.first_name)
 #     self.body.gsub("{{first_name}}", recipient.first_name)
 #   end

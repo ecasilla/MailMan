@@ -8,10 +8,10 @@ describe EmailTemplate do
   
   describe "#parse_according_to" do
     let!(:email_template) {FactoryGirl.create(:email_template)}
-    let!(:user) {FactoryGirl.create(:user, email: "another_email@gmail.com")}
+    let!(:recipient) {FactoryGirl.create(:recipient)}
 
-    it "return parsed email_template " do
-      expect(email_template.parse_according_to(user)).to eq("Hello John Doe, Email: another_email@gmail.com.")
+    it "returns a parsed email template with correct user info" do     
+      expect(email_template.parse_according_to(recipient)).to eq("Hello John Doe, Email: another_email_@gmail.com, Phone: 555-555-5555.")
     end
   end
 end
