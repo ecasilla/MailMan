@@ -30,8 +30,9 @@ class EmailTemplate < ActiveRecord::Base
 
   # to return a copy of the template parsed to a specific recipient
   def parse
-    unparsed = self.scan(/^|first_name|last_name|email|phone|\s/)
-    return self.subbed_exp(unparsed)
+    unparsed = self.body.scan(/^|first_name|last_name|email|phone|\s/)
+    new_body =  self.subbed_exp(unparsed)
+    new_body.save
   end  
   #parsed returns the body of the email template where the Regex finds a match 
   #search for the campaigns recipients and for each replace any custom 

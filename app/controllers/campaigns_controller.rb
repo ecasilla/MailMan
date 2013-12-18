@@ -21,7 +21,6 @@ class CampaignsController < ApplicationController
     redirect_to root_url, notice: "Email sent"
   end
 
-
   def show
   end
 

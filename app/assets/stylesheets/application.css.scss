@@ -8,7 +8,7 @@
  *= require_tree .
  */
 
-.apiToken{
+.apiToken {
   float: right;
   position: relative
   
@@ -18,7 +18,7 @@
   margin: 10px;
 }
 
- form.edit_campaign #edit_campaign{
+form.edit_campaign #edit_campaign{
   margin: auto 0px;
 }
 
@@ -185,7 +185,8 @@ div.wysiwyg div.btn-group{
 
 .btnCode{
   background-color: rgb(192,192,192);
-  margin: 10px
+  margin: 10px;
+  padding: 2px;
 }
 
 #template-submit{
