@@ -8,10 +8,6 @@
  *= require_tree .
  */
 
-.sep{
-margin-bottom: 100px;
-}
-
 .apiToken{
   float: right;
   position: relative
@@ -95,6 +91,7 @@ body{
 
 .editor-and-render-wrapper {
 }
+
 .btn.file{
   margin-left: 100px;
 }
@@ -183,7 +180,11 @@ form.new_email_template, form.edit_email_template {
 div.wysiwyg div.btn-group{
   padding: 5px;
   margin: 5px;
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(192, 192, 192);
+}
+
+.btnCode{
+  background-color: rgb(192,192,192);
 }
 
 #template-submit{

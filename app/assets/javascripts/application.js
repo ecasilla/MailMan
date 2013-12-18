@@ -10,7 +10,6 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree ./app
 //= require jquery
 //= require jquery.hotkeys
 //= require jquery_ujs

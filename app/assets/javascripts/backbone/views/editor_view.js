@@ -13,7 +13,7 @@ var EditorView = Backbone.View.extend({
     this.$el.find(".rendered").html( this.template(this.example) );
   },
 
-  example: JSON.parse('{"first_name": "Ernie", "last_name": "Casilla"}'),
+  example: JSON.parse('{"first_name": "John", "last_name": "Doe", "email": "jdoe@gmail.com", "phone": "(212)455-5555" }'),
 
   events: {
     "keyup #editor": "render",

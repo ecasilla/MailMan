@@ -1,5 +1,5 @@
 <%= form_for @email_template, :url => ( @email_template.body.nil? ? campaign_email_template_path(@campaign) : edit_campaign_email_template_path(@campaign).gsub("/edit","")), :html => {:class => "email-template" } do |f| %>
-<%= f.text_field :name,:placeholder => "Template Name" %>
+<%= f.text_field :name,:placeholder => "Subject Line" %>
 
 <div class="wysiwyg">
 <div id="alerts"></div>
@@ -71,13 +71,13 @@
       <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="" class="voice">
     </div>
       <div class="btn-group">
-        <a class="btn" data-edit="first_name" title="first_name" id="first_name">
+        <a class="btnCode" data-edit="first_name" title="first_name" id="first_name">
           <i class="fa fa-code"></i></a>
-        <a class="btn" data-edit="first_name" title="last_name" id="last_name">
+        <a class="btnCode" data-edit="first_name" title="last_name" id="last_name">
           <i class="fa fa-code"></i></a>
-        <a class="btn" data-edit="first_name" title="email" id="email">
+        <a class="btnCode" data-edit="first_name" title="email" id="email">
           <i class="fa fa-code"></i></a>
-        <a class="btn" data-edit="first_name" title="phone" id="phone">
+        <a class="btnCode" data-edit="first_name" title="phone" id="phone">
           <i class="fa fa-code"></i></a>
 </div>
 <div class="editor-and-render-wrapper">

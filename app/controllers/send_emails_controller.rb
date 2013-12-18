@@ -4,8 +4,9 @@ class SendEmailsController < ApplicationController
     render :new
   end
 
-  def create
-    @campaign = CampaignMailer.send_blast.deliver
+  def send_email
+    Resque.enqueue(SendBackgroundEmail, current_user.email, params)
+    redirect_to root_url, notice: "Email sent"
   end
 
   def show
