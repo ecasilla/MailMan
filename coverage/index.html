@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2013-12-18T15:17:12-05:00">2013-12-18T15:17:12-05:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2013-12-18T15:48:31-05:00">2013-12-18T15:48:31-05:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">63.16%</span></span>
+    (<span class="covered_percent"><span class="red">79.59%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.68
+         0.87
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>5</b> files in total.
-    <b>57</b> relevant lines. 
-    <span class="green"><b>36</b> lines covered</span> and
-    <span class="red"><b>21</b> lines missed </span>
+    <b>49</b> relevant lines. 
+    <span class="green"><b>39</b> lines covered</span> and
+    <span class="red"><b>10</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -72,12 +72,12 @@
       
       <tr>
         <td class="strong"><a href="#da78e3f145f721df06a2837909fdbb5df46f810d" class="src_link" title="app/models/email_template.rb">app/models/email_template.rb</a></td>
-        <td class="red strong">33.33 %</td>
-        <td>50</td>
-        <td>21</td>
-        <td>7</td>
-        <td>14</td>
-        <td>0.3</td>
+        <td class="red strong">76.92 %</td>
+        <td>22</td>
+        <td>13</td>
+        <td>10</td>
+        <td>3</td>
+        <td>0.8</td>
       </tr>
       
       <tr>
@@ -311,11 +311,11 @@
         <div class="source_table" id="da78e3f145f721df06a2837909fdbb5df46f810d">
   <div class="header">
     <h3>app/models/email_template.rb</h3>
-    <h4><span class="red">33.33 %</span> covered</h4>
+    <h4><span class="red">76.92 %</span> covered</h4>
     <div>
-      <b>21</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
-      <span class="red"><b>14</b> lines missed.</span>
+      <b>13</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
+      <span class="red"><b>3</b> lines missed.</span>
     </div>
   </div>
   
@@ -346,277 +346,109 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby">  #before_create :parse</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="6">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="7">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def instance</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
-          
-          <code class="ruby">    temp = self.find_by(id: self.id)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="9">
-          
-          
-          <code class="ruby">    return temp.body</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="11">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="12">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
           <code class="ruby">  def self.text_search(query)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="6">
           
           
           <code class="ruby">    if query.present?</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="14">
+        <li class="missed" data-hits="0" data-linenumber="7">
           
           
           <code class="ruby">      search(query)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="8">
           
           
           <code class="ruby">    else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="16">
+        <li class="missed" data-hits="0" data-linenumber="9">
           
           
           <code class="ruby">      scoped</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="11">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="19">
+        <li class="never" data-hits="" data-linenumber="12">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
-          
-          
-          <code class="ruby">#   def parsedwithname(recipient)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="21">
-          
-          
-          <code class="ruby">#     self.body </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="22">
-          
-          
-          <code class="ruby">#     self.body.gsub(&quot;{{first_name}}&quot;, recipient.first_name)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="23">
-          
-          
-          <code class="ruby">#     self.body.gsub(&quot;{{first_name}}&quot;, recipient.first_name)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="24">
-          
-          
-          <code class="ruby">#   end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="25">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="26">
-          
-          
-          <code class="ruby"># recipient.each do |r|</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby">#   parsedwithname(r)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="28">
-          
-          
-          <code class="ruby"># end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="30">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="31">
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">  # to return a copy of the template parsed to a specific recipient</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  def parse</code>
+          <code class="ruby">  def parse_according_to(recipient)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    unparsed = self.body.scan(/^|first_name|last_name|email|phone|\s/)</code>
+          <code class="ruby">    self.body = self.body.gsub(&quot;{{first_name}}&quot;, recipient.first_name)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="34">
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    new_body =  self.subbed_exp(unparsed)</code>
+          <code class="ruby">    self.body = self.body.gsub(&quot;{{last_name}}&quot;,  recipient.last_name)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="35">
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    new_body.save</code>
+          <code class="ruby">    self.body = self.body.gsub(&quot;{{email}}&quot;,      recipient.email)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="36">
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    binding.pry</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    self.body.gsub(&quot;{{  phone  }}&quot;,      recipient.phone)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
           
           
           <code class="ruby">  end  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="37">
-          
-          
-          <code class="ruby">  #parsed returns the body of the email template where the Regex finds a match </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
-          
-          
-          <code class="ruby">  #search for the campaigns recipients and for each replace any custom </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="39">
-          
-          
-          <code class="ruby">  #code match with the actual name or email for that users campaigns recipients</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="40">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def subbed_exp(parsed)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="41">
-          
-          
-          <code class="ruby">    campaign_recipients = self.campaign.recipients</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="42">
-          
-          
-          <code class="ruby">    campaign_recipients.each do |recipient|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="43">
-          
-          
-          <code class="ruby">      parsed.select{ |s| s.include? &quot;first_name&quot; }.each{ |s| s.replace(recipient.first_name  ) }</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="44">
-          
-          
-          <code class="ruby">      parsed.select{ |s| s.include? &quot;last_name&quot; }.each{ |s| s.replace(recipient.last_name  ) }</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="45">
-          
-          
-          <code class="ruby">      parsed.select{ |s| s.include? &quot;email&quot; }.each{ |s| s.replace(recipient.email  ) }</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="46">
-          
-          
-          <code class="ruby">      parsed.select{ |s| s.include? &quot;phone&quot; }.each{ |s| s.replace(recipient.phone ) }</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="48">
-          
-          
-          <code class="ruby">  end   </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="49">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby">end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="22">
           
           
           <code class="ruby"></code>
