@@ -6,17 +6,12 @@ class RecipientsController < ApplicationController
   end
 
   def create
-    if request.post? && params[:file].present?
-      infile = params[:file].read
-      import(infile)
-    else 
       @recipient = Recipient.new(recipient_params)
       @recipient.user = @user
     if @recipient.save
       redirect_to user_recipients_path(@user)
     else
       render :new
-    end
     end
   end
 
@@ -36,7 +31,7 @@ class RecipientsController < ApplicationController
   private
 
   def recipient_params
-    params.require(:recipient).permit(:first_name,:last_name, :email, :users_id,:phone,:csv)
+    params.require(:recipient).permit(:first_name,:last_name, :email, :users_id,:phone)
   end
 
   def set_user

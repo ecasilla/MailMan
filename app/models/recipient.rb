@@ -5,6 +5,8 @@ class Recipient < ActiveRecord::Base
   belongs_to :user
   has_attached_file :csv
 
+  #after_csv_post_process
+
  def self.text_search(query)
   if query.present?
      search(query)
@@ -16,7 +18,7 @@ class Recipient < ActiveRecord::Base
  def self.import_csv
   respond_to do |format|
     @csv_text = File.read(params[:file].tempfile.to_path.to_s)
-    @csv = CSV.parse(@csv_text, :headers => true)
+    @csv = CSV.parse(@csv_text, :headers => false)
     @n=0
 
     @csv.each do | row |

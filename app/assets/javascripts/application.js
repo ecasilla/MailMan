@@ -117,7 +117,5 @@ $( "#phone" ).click(function() {
   $('#editor').append("{{phone}}");
 });
 
-
-
 });
 

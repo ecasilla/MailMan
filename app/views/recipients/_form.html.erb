@@ -1,9 +1,6 @@
 
 <div class="divider"></div>
-<%= form_for @recipient, :url => user_recipients_path(current_user), :html => { :multipart => true } do |f| %>
-  <%= f.file_field :csv, class: "form-file" %>
-  <%= f.submit "Upload" , class: "btn btn-primary form-horizontal"  %>
-<% end %>
+
 
 
 <%= form_for @recipient, method: :post, url: user_recipients_path(current_user) do |f| %>
