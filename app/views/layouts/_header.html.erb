@@ -1,101 +1,80 @@
- <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-  <!-- Body - Add "contained" to below classes for boxed layout -->
-  <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-  <body class="light-bg home">
+<div class="topbar-outer dark">
+  <div class="topbar content-width">
 
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <!-- Main Container -->
-    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-    <div class="main-container">
-
-      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-      <!-- Top Bar - Set "white" or "dark" below -->
-      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-      <div class="topbar-outer dark">
-        <div class="topbar content-width">
-
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-          <!-- Logo -->
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-          <div class="table fullheight">
-            <div class="table-cell fullheight middle">
-              <div class="logo"></div>
-            
-            </div>
-          </div>
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-          <!-- END Logo -->
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-          <!-- Social Icons -->
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-          <ul class="topsocial">
-            <li><a href="#"><i class="fa fa-linkedin-square"></i><div class="tooltip">LinkedIn</div></a></li>
-            <li><a href="#"><i class="fa fa-facebook"></i><div class="tooltip">Facebook</div></a></li>
-            <li><a href="#"><i class="fa fa-twitter"></i><div class="tooltip">Twitter</div></a></li>
-            <li><a href="#"><i class="fa fa-google-plus"></i><div class="tooltip">Google+</div></a></li>
-          </ul>
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-          <!-- END Social Icons -->
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-          <!-- Main Navigation -->
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-          <ul class="topnav">
-              <% if current_user %>
-                <li><%= link_to "My Account", user_path(@current_user.id) %></li>
-              <%end %>
-            <li><%= link_to "Email Campaigns",user_campaigns_path( current_user ) %></li>
-            <li><%= link_to "Contacts", user_recipients_path(current_user) %></li>
-            <li><%= link_to "About Us", about_path %></li>
-            <% if current_user %>
-              <li><%= link_to "Sign out", session_path, :method => :delete %></li>
-            <% else %>
-              <li><%= link_to "Sign in",new_session_path %></li>
-            <% end %>
-          </ul>
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-          <!-- END Main Navigation -->
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-          <!-- Mobile Navigation -->
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-          <!-- Show/Hide Menu Button -->
-          <!-- ~~~~~~~~~~~~~~~~~ -->
-          <a href="#" class="mobilenav-click">
-          <div class="mobilenav-button-container">
-            <div class="mobilenav-button-inner">
-              <div class="mobilenav-button"></div>
-            </div>
-          </div>
-          </a>
-          <!-- ~~~~~~~~~~~~~~~~~ -->
-          <!-- END Show/Hide Menu Button -->
-          <!-- ~~~~~~~~~~~~~~~~~ -->
-
-          <!-- ~~~~~~~~~~~~~~~~~ -->
-          <!-- Navigation Menu (Populated using jQuery) -->
-          <!-- ~~~~~~~~~~~~~~~~~ -->
-          <div class="mobilenav-container">
-            <ul class="mobilenav">
-            </ul>
-          </div>
-          <!-- ~~~~~~~~~~~~~~~~~ -->
-          <!-- END Navigation Menu
-          <!-- ~~~~~~~~~~~~~~~~~ -->
-          <!-- END Mobile Navigation -->
-          <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Logo -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <div class="table fullheight">
+      <div class="table-cell fullheight middle">
+        <div class="logo">
         </div>
       </div>
-      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-      <!-- END Top Bar -->
-      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    </div>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- END Logo -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
-      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-      <!-- Home Banner ("light" and "dark" style can be applied here) -->
-      <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-      <div class="home-banner dark">
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Social Icons -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <ul class="topsocial">
+      <li><a href="#"><i class="fa fa-linkedin-square"></i><div class="tooltip">LinkedIn</div></a></li>
+      <li><a href="#"><i class="fa fa-facebook"></i><div class="tooltip">Facebook</div></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i><div class="tooltip">Twitter</div></a></li>
+      <li><a href="#"><i class="fa fa-google-plus"></i><div class="tooltip">Google+</div></a></li>
+    </ul>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- END Social Icons -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Main Navigation -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <ul class="topnav">
+        <% if current_user %>
+          <li><%= link_to "My Account", user_path(@current_user.id) %></li>
+        <%end %>
+      <li><%= link_to "Email Campaigns",user_campaigns_path( current_user ) %></li>
+      <li><%= link_to "Contacts", user_recipients_path(current_user) %></li>
+      <li><%= link_to "About Us", about_path %></li>
+      <% if current_user %>
+        <li><%= link_to "Sign out", session_path, :method => :delete %></li>
+      <% else %>
+        <li><%= link_to "Sign in",new_session_path %></li>
+      <% end %>
+    </ul>
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- END Main Navigation -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Mobile Navigation -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <!-- Show/Hide Menu Button -->
+    <!-- ~~~~~~~~~~~~~~~~~ -->
+    <a href="#" class="mobilenav-click">
+    <div class="mobilenav-button-container">
+      <div class="mobilenav-button-inner">
+        <div class="mobilenav-button"></div>
+      </div>
+    </div>
+    </a>
+    <!-- ~~~~~~~~~~~~~~~~~ -->
+    <!-- END Show/Hide Menu Button -->
+    <!-- ~~~~~~~~~~~~~~~~~ -->
+
+    <!-- ~~~~~~~~~~~~~~~~~ -->
+    <!-- Navigation Menu (Populated using jQuery) -->
+    <!-- ~~~~~~~~~~~~~~~~~ -->
+    <div class="mobilenav-container">
+      <ul class="mobilenav">
+      </ul>
+    </div>
+    <!-- ~~~~~~~~~~~~~~~~~ -->
+    <!-- END Navigation Menu
+    <!-- ~~~~~~~~~~~~~~~~~ -->
+    <!-- END Mobile Navigation -->
+    <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+  </div>
+</div>

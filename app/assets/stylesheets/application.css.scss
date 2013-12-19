@@ -8,6 +8,22 @@
  *= require_tree .
  */
 
+#push{
+  height: 130px;
+}
+#push{
+  height: 230px;
+}
+.logo-background{
+  background-image: url("https://s3.amazonaws.com/mailmanlogo/MAILMAN+LOGO.png");
+}
+.currentRecipients{
+  margin-left: 400px;
+}
+.campaignShow {
+  margin-top: 70px;
+}
+
 .apiToken {
   float: right;
   position: relative
@@ -88,9 +104,11 @@ body{
 
 .btn.file{
   margin-left: 100px;
+  margin-top: 30px; 
 }
 .about{
   width: 400px;
+  margin-left: 500px;
 }
 
 .editCampaignBtn{

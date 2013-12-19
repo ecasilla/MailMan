@@ -3,8 +3,16 @@ body.dark-bg {
   background-color: #e2e2e2;
 }
 
-main-container {
+.create_contact{
+  margin-top: 100px;
+}
+
+.main-container {
   width: 100%;
+  min-height: 100%; 
+  height: auto !important; 
+  height: 100%; 
+  margin: 0 auto -130px;  
   margin: 0 auto 0 auto;
   position: relative;
   display: table;

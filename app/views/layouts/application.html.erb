@@ -20,14 +20,19 @@
   	<%= stylesheet_link_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
+  <body class="light-bg home">
+    <div class="main-container" style=>
 
-  <%= render 'layouts/header' %>
-  <div></div>
+      <%= render 'layouts/header' %>
+      
+      <div class="home-banner dark">
+        <%= yield %>
+      </div>
+        
+      <div id="push"></div>
+    </div>
+    <%= render 'layouts/footer' %>
 
-
-
-  <%= yield %>
-    <%= javascript_include_tag "application" %>
-      <%= render 'layouts/footer' %>
+    <%= javascript_include_tag "application" %>      
   </body>
 </html>

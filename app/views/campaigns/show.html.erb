@@ -1,4 +1,4 @@
-<center>
+<center class="campaignShow">
 <h1>Campaign: <%= @campaign.name %></h1>
 <%= link_to "Edit Campaign", edit_campaign_path(@campaign), class: 'btn btn-primary editCampaignBtn'  %>
 <% if @campaign.email_template %> <br>
@@ -9,10 +9,10 @@
   <%= link_to 'Create Template', new_campaign_email_template_path(@campaign), class: 'btn btn-primary campaignBtn' %>
 <% end %>
 
-<%= link_to 'Start Blasting Emails', campaign_send_email_path(@campaign), class: 'btn btn-primary campaignBtn' %>
+<%= link_to 'Start Blasting Emails', send_email_campaign_path(@campaign), class: 'btn btn-primary campaignBtn' %>
 
 <h3>Current Recipients:</h3>
-<ul>
+<ul class="currentRecipients">
   <% @campaign.recipients.uniq.each do |recipient| %>
     <li class="recipient_email"><%= recipient.email %></li>
     <li class="recipient_email"><%= recipient.first_name %></li>
