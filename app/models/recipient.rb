@@ -4,7 +4,6 @@ class Recipient < ActiveRecord::Base
   has_many :campaigns
   belongs_to :user
   
-
  def self.text_search(query)
   if query.present?
      search(query)

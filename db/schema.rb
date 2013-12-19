@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131219032351) do
+ActiveRecord::Schema.define(version: 20131219032613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,13 +51,17 @@ ActiveRecord::Schema.define(version: 20131219032351) do
   end
 
   create_table "recipients", force: true do |t|
-    t.string   "email",      null: false
-    t.integer  "user_id",    null: false
+    t.string   "email",            null: false
+    t.integer  "user_id",          null: false
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "first_name", null: false
-    t.string   "last_name",  null: false
+    t.string   "first_name",       null: false
+    t.string   "last_name",        null: false
     t.string   "phone"
+    t.string   "csv_file_name"
+    t.string   "csv_content_type"
+    t.integer  "csv_file_size"
+    t.datetime "csv_updated_at"
   end
 
   add_index "recipients", ["user_id"], name: "index_recipients_on_user_id", using: :btree
