@@ -17,10 +17,10 @@ test:
   password:
   host: "localhost"
 
-# production:
-#   adapter: postgresql
-#   encoding: unicode
-#   database: mailman_production
-#   pool: 5
-#   username: ecasilla
-#   password:
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: mailman_production
+  pool: 5
+  username: ecasilla
+  password:

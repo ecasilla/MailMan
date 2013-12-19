@@ -6,7 +6,7 @@
     <h3>These Are All Your Campiagns</h3>
     <ul class="allCampaigns">
       <% @campaigns.each do |campaign| %>
-      <%= link_to campaign.name, campaign_path(campaign) %>
+      <li class="campname"><%= link_to campaign.name, campaign_path(campaign) %></li>
       <% end %>
     </center>
   </ul>

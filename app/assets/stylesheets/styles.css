@@ -1,3 +1,18 @@
+div.mural {
+    margin-top: -3em;
+    background-position: center;
+    background-attachment: fixed !important;
+    background-repeat:no-repeat;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 40px;
+    z-index: -1;
+    background-color: rgb(192,192,192);
+} 
+
 body.dark-bg {
   color: rgba(255,255,255,0.5);
   background-color: #e2e2e2;
@@ -19,6 +34,7 @@ body.dark-bg {
   table-layout: fixed;
   height: 100%;
   overflow: visible;
+  background-color: rgb(192,192,192,0.2);
 }
 
 .main-content {

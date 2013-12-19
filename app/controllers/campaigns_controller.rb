@@ -12,12 +12,10 @@ class CampaignsController < ApplicationController
 
   def create
     @campaign = @user.campaigns.create(campaigns_params)
-    binding.pry
     redirect_to campaign_path(@campaign)
   end
 
   def send_email
-    #Resque.enqueue(SendBackgroundEmail, @user.campaigns.recipients, params)
     @campaign.recipients.each do |recipient|
       CampaignMailer.blast(@campaign, recipient).deliver
     end

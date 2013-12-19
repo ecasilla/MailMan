@@ -3,12 +3,7 @@ class Recipient < ActiveRecord::Base
   validates :first_name,:last_name, presence: true
   has_many :campaigns
   belongs_to :user
-
- #  def self.import(file)
- #    CSV.foreach(file.path, headers: true,:skip_blanks => true) do |row|
- #    Recipent.create! row.to_hash
- #  end
- # end
+  
 
  def self.text_search(query)
   if query.present?
