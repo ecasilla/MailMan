@@ -1,6 +1,6 @@
 class CampaignsController < ApplicationController
   before_action :set_user, only: [:index, :new, :create, :show]
-  before_action :set_campaign, only: [:show, :edit, :update]
+  before_action :set_campaign, only: [:show, :edit, :update, :send_email]
 
   def index
     @campaigns = @user.campaigns
@@ -13,6 +13,13 @@ class CampaignsController < ApplicationController
   def create
     @campaign = @user.campaigns.create(campaigns_params)
     redirect_to campaign_path(@campaign)
+  end
+
+  def send_email
+    @campaign.recipients.each do |recipient|
+      CampaignMailer.blast(@campaign, recipient).deliver
+    end
+    redirect_to root_url, notice: "Email sent"
   end
 
   def show

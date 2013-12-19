@@ -1,13 +1,18 @@
-<table>
+<table class = "table table-striped info">
   <thead>
     <tr>
-      <th width="200">Name</th>
+      <th width="200">First Name</th>
+      <th width="200">Last Name</th>
       <th width="150">Email</th>
+      <th width="200">Phone</th>
     </tr>
   </thead>
     <tr>
-      <td><%= @recipent.name%></td>
-      <td><%= @recipent.email%></td>
+      <td><%= @recipent.first_name %></td>
+      <td><%= @recipent.last_name %></td>
+      <td><%= @recipent.email %></td>
+      <td><%= @recipent.phone %></td>
       <td><%=link_to "Edit" %></td>
 
     </tr>
+  </table>

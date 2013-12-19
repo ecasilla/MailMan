@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131025095243) do
+ActiveRecord::Schema.define(version: 20131219032613) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "api_keys", force: true do |t|
+    t.string   "access_token"
+    t.integer  "user_id",                             null: false
+    t.date     "expires_at",   default: '2014-12-17'
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "campaigns", force: true do |t|
     t.string  "name"
@@ -43,23 +51,30 @@ ActiveRecord::Schema.define(version: 20131025095243) do
   end
 
   create_table "recipients", force: true do |t|
-    t.string   "name",       null: false
-    t.string   "email",      null: false
-    t.integer  "user_id",    null: false
+    t.string   "email",            null: false
+    t.integer  "user_id",          null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "first_name",       null: false
+    t.string   "last_name",        null: false
+    t.string   "phone"
+    t.string   "csv_file_name"
+    t.string   "csv_content_type"
+    t.integer  "csv_file_size"
+    t.datetime "csv_updated_at"
   end
 
   add_index "recipients", ["user_id"], name: "index_recipients_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "name",            null: false
     t.string   "email",           null: false
     t.string   "password_digest", null: false
     t.integer  "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
+    t.string   "last_name"
+    t.string   "first_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

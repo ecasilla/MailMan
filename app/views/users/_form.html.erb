@@ -4,21 +4,18 @@
   <% end %>
 <% end %>
 
-<%= form_for @user do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<%= form_for @user do |f|  %>
+  <%= f.text_field :first_name, class: "form-horizontal", placeholder: "First Name" %>
 
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+ <%= f.text_field :last_name, class: "form-horizontal",placeholder: "Last Name"  %>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <%= f.email_field :email, class: "form-horizontal",placeholder: "Email"  %>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
+  <%= f.password_field :password,class: "form-horizontal" ,placeholder: "Password" %>
 
-  <%= f.label :phone %>
-  <%= f.text_field :phone_number %>
+  <%= f.password_field :password_confirmation,class: "form-horizontal",placeholder: "Password Confirmation"  %>
 
-  <%= f.submit "Submit" ,class: "button radius"  %>
+  <%= f.text_field :phone_number,class: "form-horizontal",placeholder: "Phone" %>
+
+  <%= f.submit "Submit" ,class: "btn btn-primary form-horizontal"  %>
 <% end %>

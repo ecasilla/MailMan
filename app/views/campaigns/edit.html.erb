@@ -1,8 +1,13 @@
-<h1>Editing <%= @campaign.name %></h1>
+<div class="campaignShow">
+<center>
+  <h1>Editing <%= @campaign.name %></h1>
 
-<h3>Add Recipients</h3>
-<%= form_for @campaign, :url => { :action => "update" } do |f| %>
-  <%= f.collection_select(:recipient_ids, current_user.recipients, :id, :email, {}, multiple: true) %>
-  <%= f.submit :save %>
-<% end %>
-
+    <h3 style="margin-right:25px;">Add Recipients</h3>
+    <%= form_for @campaign, :url => { :action => "update" } do |f| %>
+    <div id="selectable">
+      <%= f.collection_select(:recipient_ids, current_user.recipients.uniq, :id, :email, {}, multiple: true) %>
+    </div>
+      <%= f.submit :save, class: "btn btn-primary" %>
+    <% end %>
+  </center>
+</div>

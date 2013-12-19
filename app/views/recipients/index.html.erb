@@ -1,18 +1,26 @@
-<%= link_to "Create Contact", new_user_recipient_path(current_user), class: "button radius" %>
+<div id="push">
+  <center>
+<%= link_to "Create Contact", new_user_recipient_path(current_user), class: "btn btn-primary create_contact" %>
 <h3>These Are All Your Recipients</h3>
 <table>
   <thead>
     <tr>
-      <th width="200">Name</th>
+      <th width="200">First Name</th>
+      <th width="200">Last Name</th>
       <th width="150">Email</th>
+      <th width="150">Phone</th>
     </tr>
   </thead>
   <% @recipients.each do |recipient| %>
     <tr> 
-      <td><%= recipient.name%></td>
-      <td><%= recipient.email%></td>
+      <td><%= recipient.first_name %></td>
+      <td><%= recipient.last_name %></td>
+      <td><%= recipient.email %></td>
+      <td><%= recipient.phone %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
+</center>
+</div>
 

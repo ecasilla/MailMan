@@ -2,11 +2,18 @@ Mailman::Application.routes.draw do
   
   root :to => "welcome#index"
   get '/about' => 'welcome#about'
+
+  namespace :api do
+      resources :campaigns
+  end
   
   resources :users, except: [:index] do
     resources :campaigns, shallow: true, except: [:destroy] do
       resource :email_template, shallow: true, only: [:new, :create, :edit, :update]
-      resource :send_email, shallow: true, only:[:create,:show]
+      
+      member do 
+        get 'send_email'
+      end
     end
 
     resources :recipients, shallow: true, only: [:new, :create, :index]

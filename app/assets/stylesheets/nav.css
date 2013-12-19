@@ -1,0 +1,134 @@
+/* --------------------------------------------------------------------------------- */
+/* Top Bar
+/* --------------------------------------------------------------------------------- */
+.topbar-outer {
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index:999;
+}
+@media only screen and (min-width: 1059px) {
+  body.contained .topbar-outer {
+    width: 1042px;
+  }
+}
+.topbar {
+  width: 960px;
+  margin: 0 auto 0 auto;
+  opacity: 1 !important;
+}
+/* -------------------------------- */
+/* Topbar Height
+/* -------------------------------- */
+.topbar-outer, .topbar, .topnav, .topnav li, .topnav li a, .topsocial, .topsocial li {
+  height: 60px;
+}
+/* -------------------------------- */
+/* Dark Top Bar Properties */
+/* -------------------------------- */
+.topbar-outer.dark {
+  background-color: #1b222e;
+  top:0px;
+}
+body.home .topbar-outer.dark {
+  background-color: #1b222e;
+}
+/* -------------------------------- */
+/* Logo
+/* -------------------------------- */
+.logo {
+  display: -webkit-inline-box;
+  clear: right;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 800; /* Ultra Bold */
+  color: #1b222e;
+  margin-right: 20px;
+  letter-spacing: -1px;
+  background-image:url("/app/assets/images/logos/logo.png"); 
+}
+.logo a {
+  color: #1b222e;
+}
+/* -------------------------------- */
+/* Top Bar Social Icons
+/* -------------------------------- */
+.topsocial {
+  display: -webkit-inline-box;
+  float: left;
+}
+.topsocial li {
+  top: -25px;
+  list-style: none;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.topsocial li i {
+  font-size: 16px;
+}
+/* -------------------------------- */
+/* Dark Top Bar Social Icons
+/* -------------------------------- */
+.topbar-outer.dark .topsocial li i {
+  color: #ffffff;
+  opacity: 0.4;
+}
+.topbar-outer.dark .topsocial li i:hover {
+  opacity: 1;
+}
+/* --------------------------------------------------------------------------------- */
+/* Top Bar Navigation
+/* --------------------------------------------------------------------------------- */
+.topnav {
+  float: right;
+}
+.topnav li {
+  top: -40px;
+  list-style: none;
+  display: block;
+  float: left;
+  vertical-align: middle;
+  padding-left: 30px;
+  font-size: 13px;
+  font-weight: 500; /* Medium */
+  text-transform: none;
+  position: relative;
+}
+.topnav li a {
+  display: table-cell;
+  vertical-align: middle;
+  border-top: 4px solid transparent;
+  padding-bottom: 4px;
+  white-space: nowrap;
+}
+.topnav li a.current {
+  border-top: 4px solid #2c7ebe !important;
+  font-weight: 500; /* Bold */
+}
+/* -------------------------------- */
+/* Dark Top Bar Navigation
+/* -------------------------------- */
+.topbar-outer.dark .topnav li a {
+  color: #ffffff;
+  opacity: 0.7;
+  -webkit-transition: opacity .1s linear;
+  -moz-transition: opacity .1s linear;
+  -o-transition: opacity .1s linear;
+  -ms-transition: opacity .1s linear;
+  transition: opacity .1s linear;
+}
+.topbar-outer.dark .topnav li a.current {
+  color: #ffffff;
+}
+.topbar-outer.dark .topnav li a:hover {
+  color: #ffffff;
+}
+.topbar-outer.dark .topnav li a.drop:after {
+  color: #ffffff;
+}
+.topbar-outer.dark .topnav li a.drop.current:after {
+  color: #ffffff;
+}
+.topbar-outer.dark .topnav li a.drop:hover:after {
+  color: #ffffff;
+}

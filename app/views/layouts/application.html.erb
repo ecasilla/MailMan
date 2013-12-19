@@ -15,48 +15,24 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   	<title><%= content_for?(:title) ? yield(:title) : "MailMan" %></title>
+    <%= favicon_link_tag '/images/favicon.ico' %>
 
-  	<%= stylesheet_link_tag    "application" %>
-  	<%= javascript_include_tag "vendor/custom.modernizr" %>
+  	<%= stylesheet_link_tag "application" %>
     <%= csrf_meta_tags %>
   </head>
+  <body class="light-bg home">
+    <div class="main-container">
 
-  <body>
-    <nav class="top-bar">
-      <ul class="title-area">
-        <li class="name">
-          <h1><%= link_to "MailMan",root_path %></a></h1>
-        </li>
-      </ul>
-      <section class="top-bar-section">
-        <ul class="right">
-          <li class="divider"></li>
-          <li><%= link_to "Create Campaign",new_user_campaign_path( current_user ) %></li>
-          <li class="divider"></li>
-          <li><%= link_to "Contact Us", new_contact_path  %></li>
-          <li class="divider"></li>
-          <li><%= link_to "About Us", about_path %></li>
-        </ul>
-      </section>
-    </nav>
-
-  <div class="row">
-    <div class="small-8 columns">
-      <dl class="sub-nav">
-        <dd><li><%= link_to "Main",user_path(current_user) %></li></dd>
-        <dd><li><%= link_to "Edit", edit_user_path(current_user) %></li></dd>
-        <dd><li><%= link_to "Contacts", user_recipients_path(current_user)  %></li></dd>
-        <dd><li><%= link_to "Campaigns",user_campaigns_path(current_user) %></li></dd>
-        <dd><li><%= link_to "Delete Account", user_path(current_user), :method => :delete %></li></dd>
-        <dd><li><%= link_to "Log Out", session_path, :method => :delete %></li></dd>
-      </dl>
-      <%= yield %>
-    </div>
-    <div class="small-4 columns">
+      <%= render 'layouts/header' %>
       
+      <div class="home-banner dark">
+        <%= yield %>
+      </div>
+        
+      <div id="push"></div>
     </div>
-  </div>
-    
-    <%= javascript_include_tag "application" %>
+    <%= render 'layouts/footer' %>
+
+    <%= javascript_include_tag "application" %>      
   </body>
 </html>

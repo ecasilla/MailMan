@@ -1,0 +1,222 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require font-awesome
+ *= reuire styles.css
+ *= require_tree .
+ */
+.campname{
+  margin-top: 10px;
+}
+#push{
+  height: 130px;
+}
+#push{
+  height: 230px;
+}
+.logo-background{
+  background-image: url("https://s3.amazonaws.com/mailmanlogo/MAILMAN+LOGO.png");
+}
+.currentRecipients{
+  margin-left: 400px;
+}
+.campaignShow {
+  margin-top: 70px;
+}
+
+.apiToken {
+  float: right;
+  position: relative
+  
+}
+.apiTokenHeader{
+  float: right;
+  margin: 10px;
+}
+
+form.edit_campaign #edit_campaign{
+  margin: auto 0px;
+}
+
+body{
+  max-width: 1600px;
+}
+.input_wrapper{
+  margin-top:15px; 
+}
+
+.subnav{
+  margin: 100px;  
+}
+
+.voice {
+  float: 15px;
+}
+
+.recipient_email{
+  list-style-type: none;
+  font-weight:bold;
+  color:#11187A;
+  letter-spacing:1pt;
+  word-spacing:2pt;
+  font-size:16px;
+  text-align:left;
+  font-family:georgia, serif;
+  line-height:1;
+  margin:0px;padding:0px;width:580px;
+}
+
+#editor {
+  max-height: 250px;
+  height: 250px;
+  background-color: rgb(238, 238, 238);
+  border-collapse: separate; 
+  border: 1px solid rgb(204, 204, 204);  
+  box-sizing: content-box; 
+  -webkit-box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset; 
+  box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px 0px inset;
+  border-top-right-radius: 6px; border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px; border-top-left-radius: 6px;
+  overflow: scroll;
+  outline: none;
+  color: rgb(51, 51, 51);
+  display: block;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 30px;
+  width: 45%;
+  word-wrap: normal;
+  float: left;
+}
+
+.render-wrapper {
+  height: 320px;
+  width: 45%;
+  float: right;
+}
+
+.btn.file{
+  margin-left: 100px;
+  margin-top: 30px; 
+}
+
+.form-file{
+  margin-left: 200px;
+  display: -webkit-inline-box !important;
+}
+
+.about{
+  width: 400px;
+  margin-left: 500px;
+}
+
+.editCampaignBtn{
+  margin-bottom: 20px;
+}
+
+.campaignBtn{
+  margin-top: 10px; 
+}
+
+.rendered {
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  bottom: 0px;
+  box-sizing: border-box;
+  color: rgb(0, 0, 0);
+  direction: ltr;
+  display: block;
+  font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+  font-size: 14px;
+  height: 236px;
+  left: 0px;
+  line-height: 19px;
+  margin-top: 15px;
+  overflow-y: scroll;
+  right: 0px;
+  top: 40px;
+  word-wrap: normal;
+  border-radius: 6px;
+  background-color: #EEEEEE;
+}
+
+#voiceBtn {
+  z-index: 1px;
+  width: 20px;
+  color: transparent;
+  background-color: transparent;
+  transform: scale(2.0, 2.0);
+  -webkit-transform: scale(2.0, 2.0);
+  -moz-transform: scale(2.0, 2.0);
+  border: transparent;
+  cursor: pointer;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.form-horizontal {
+  margin: 14px;
+  display: block;
+  padding: 10px;
+}
+
+a.SignIn {
+  margin: 15px;
+  padding: 10px;
+}
+
+div[data-role="editor-toolbar"] {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.dropdown-menu a {
+  cursor: pointer;
+}
+
+input#email_template_name{
+  margin: 20px;
+}
+
+form.new_email_template, form.edit_email_template {
+  width: 50%;
+  min-width: 500px;
+  max-width: 50%;
+  overflow: hidden;
+}
+
+div.wysiwyg div.btn-group{
+  padding: 5px;
+  margin: 5px;
+  background-color: rgb(192, 192, 192);
+}
+
+.btnCode{
+  background-color: rgb(192,192,192);
+  margin: 10px;
+  padding: 2px;
+}
+
+.btn.btn-primary.form-horizontal{
+  display: block;
+}
+
+#template-submit{
+  margin-left: 30px;
+  
+}
+
+@import "bootstrap";
+@import "font-awesome";
