@@ -67,18 +67,14 @@ ActiveRecord::Schema.define(version: 20131219032613) do
   add_index "recipients", ["user_id"], name: "index_recipients_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
-    t.string   "email",            null: false
-    t.string   "password_digest",  null: false
+    t.string   "email",           null: false
+    t.string   "password_digest", null: false
     t.integer  "phone_number"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "slug"
     t.string   "last_name"
     t.string   "first_name"
-    t.string   "csv_file_name"
-    t.string   "csv_content_type"
-    t.integer  "csv_file_size"
-    t.datetime "csv_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

@@ -4,9 +4,26 @@
 
     <h3 style="margin-right:25px;">Add Recipients</h3>
     <%= form_for @campaign, :url => { :action => "update" } do |f| %>
+    <div id="selectable">
       <%= f.collection_select(:recipient_ids, current_user.recipients.uniq, :id, :email, {}, multiple: true) %>
+    </div>
       <%= f.submit :save, class: "btn btn-primary" %>
     <% end %>
   </center>
 </div>
-
+<!-- 
+  <script>
+  $(function() {
+    $( "#selectable" ).selectable({
+      stop: function() {
+        var result = $( "#select-result" ).empty();
+        console.log(result);
+        $( ".ui-selected", this ).each(function() {
+          var index = $( "#selectable li" ).index( this );
+          console.log(index);
+          result.append( " #" + ( index + 1 ) );
+        });
+      }
+    });
+  });
+  </script> -->

@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :campaigns
   has_secure_password
   after_create :create_api_key
-  has_attached_file :csv
+  
 
   def create
     @csv = Recipient.new(CSV_params)
