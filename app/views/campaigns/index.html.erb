@@ -1,11 +1,13 @@
+<div class="divider" ></div>
 <center class="campaignIndex">
-<div>
-  <%= link_to "Create Email Campaign", new_user_campaign_path(@user) ,class: "btn btn-primary" %>
-</center>
-<h3>These Are All Your Campiagns</h3>
-<ul class="allCampaigns">
-  <% @campaigns.each do |campaign| %>
-    <%= link_to campaign.name, campaign_path(campaign) %>
-  <% end %>
-</ul>
+  <div>
+    <%= link_to "Create Email Campaign", new_user_campaign_path(@user) ,class: "btn btn-primary" %>
+
+    <h3>These Are All Your Campiagns</h3>
+    <ul class="allCampaigns">
+      <% @campaigns.each do |campaign| %>
+      <%= link_to campaign.name, campaign_path(campaign) %>
+      <% end %>
+    </center>
+  </ul>
 </div>  
