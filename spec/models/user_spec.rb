@@ -5,14 +5,11 @@ describe User do
     it {should validate_presence_of(:email)}
     it {should validate_presence_of(:password)} 
   end
-  describe "Create New Campaign" do
-    before do
-      FactoryGirl.create(:user)
-      FactoryGirl.create(:campaign)
-      user.campaigns.create
-    end
-    it "should add a new Campaign" do
-      expect(user.campaign).to_not eq(nil) 
+
+  describe "#create_api_key" do
+    let!(:user) {FactoryGirl.create(:user)}
+    it "should generate a random random token" do
+      expect(user.api_key.access_token).to_not be(nil)
     end
   end
 end
