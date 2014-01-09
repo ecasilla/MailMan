@@ -19,6 +19,12 @@ Mailman::Application.routes.draw do
     resources :recipients, shallow: true, only: [:new, :create, :index]
   end
 
+  resources :recipients do
+    collection do
+      post :import
+    end
+  end
+
   resource :session, only: [:new, :create, :destroy]
   resource :contact, only: [:new, :create, :show]
 end

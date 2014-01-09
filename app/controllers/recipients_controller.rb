@@ -17,9 +17,11 @@ class RecipientsController < ApplicationController
 
   def import
     begin
-      Recipient.upload(params[:upload], current_user, params[:contact][:list_id])
-      redirect_to :action => "index"
-    rescue Exception => e
+      Recipient.import_csv(params[:file],current_user)
+      redirect_to user_recipients_path(current_user)
+    rescue => e
+      flash[:error] = "Your file is invalid"
+      redirect_to action: :new
     end
   end
 
