@@ -2,7 +2,7 @@ class CampaignBlaster
 
   @queue = :recipients_blast 
 
-  def self.perform(campaign_id, recipient_id)
+  def self.perform(campaign_id,recipient_id)
     # Code in here is what happens when this executed by the worker
     campaign = Campaign.find(campaign_id)
     recipient = Recipient.find(recipient_id)

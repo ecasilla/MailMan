@@ -25,6 +25,8 @@ Mailman::Application.routes.draw do
     end
   end
 
+  mount Resque::Server, :at => "/resque"
+
   resource :session, only: [:new, :create, :destroy]
   resource :contact, only: [:new, :create, :show]
 end

@@ -17,7 +17,7 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem "font-awesome-sass"
 
-gem "resque", "~> 2.0.0.pre.1", github: "resque/resque"
+gem "resque", "~> 1.25.1", require: "resque/server"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

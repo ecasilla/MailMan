@@ -19,6 +19,11 @@ It was a very ambitious project to tackle with only a week to deadline to implem
 * pg 
 * bcrypt-ruby
 * jQuery
+* Resque
+
+###Storage
+Postgres
+Redis
 
 
 
