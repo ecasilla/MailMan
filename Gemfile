@@ -75,10 +75,9 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Use unicorn as the app server
 # gem 'unicorn'
 
-# Use Capistrano for deployment
- gem 'capistrano', group: :development
-
+#gem 'capistrano', '~> 2.4.0'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'rubber'
+gem 'rubber', '~> 2.6.5'
 gem 'open4'
+gem 'rubber'

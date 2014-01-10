@@ -6,7 +6,7 @@ app_user: app
 
 # REQUIRED: Notification emails (e.g. monit) get sent to this address
 #
-admin_email: "root@#{full_host}"
+admin_email: "ecasilla@icloud.com"
 
 # OPTIONAL: If not set, you won't be able to access web_tools
 # server (graphite, graylog, monit status, haproxy status, etc)
@@ -18,7 +18,7 @@ timezone: US/Eastern
 
 # REQUIRED: the domain all the instances should be associated with
 #
-domain: foo.com
+domain: mail-man.co
 
 # OPTIONAL: See rubber-dns.yml for dns configuration
 # This lets rubber update a dynamic dns service with the instance alias
@@ -113,8 +113,14 @@ cloud_providers:
     region: New York 1
 
     # REQUIRED: The image name and type for creating instances.
-    image_id: Ubuntu 12.04 x64
+    image_id: Ubuntu 12.04.3 x64
     image_type: 512MB
+
+    client_key:
+    api_key:
+    key_name: id_rsa
+    key_dir: "#{(File.expand_path('~') rescue '/root') + '/.ssh' }"
+    key_file: "#{Dir[key_dir + '/*' + key_name].first}"
 
   # Use an alternate cloud provider supported by fog.  This doesn't fully work
   # yet due to differences in providers within fog, but gives you a starting
