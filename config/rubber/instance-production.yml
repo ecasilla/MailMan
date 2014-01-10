@@ -31,6 +31,24 @@
   - !ruby/object:Rubber::Configuration::RoleItem
     name: monit
     options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: redis
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: resque
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: resque_worker
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: redis_master
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: web_tools
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: resque_web
+    options: {}
   instance_id: 967775
   image_type: 512MB
   image_id: Ubuntu 12.04.3 x64

@@ -171,6 +171,8 @@ GEM
       slop (~> 3.4)
     pry-rails (0.3.2)
       pry (>= 0.9.10)
+    puma (2.7.1)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.1)
       rack
@@ -207,6 +209,10 @@ GEM
       redis-namespace (~> 1.2)
       sinatra (>= 0.9.2)
       vegas (~> 0.1.2)
+    resque-pool (0.3.0)
+      rake
+      resque (~> 1.20)
+      trollop (~> 1.16)
     rspec (2.14.1)
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
@@ -276,6 +282,7 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
+    trollop (1.16.2)
     turbolinks (2.1.0)
       coffee-rails
     tzinfo (0.3.38)
@@ -314,9 +321,11 @@ DEPENDENCIES
   paperclip!
   pg
   pry-rails
+  puma
   rails (= 4.0.0)
   rails_12factor
   resque (~> 1.25.1)
+  resque-pool
   rspec-rails
   rubber (~> 2.6.5)
   sass-rails (~> 4.0.0)
