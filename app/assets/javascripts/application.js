@@ -75,12 +75,6 @@ $( document ).ready(function() {
     window.prettyPrint && prettyPrint();
   });
 
-// function refresh() {
-//   $(".rendered").html( $("#editor").html() );
-// }
-// $("#editor").on("keyup", refresh);
-// $(".btn-group").on("click", refresh);
-
 $("form.email-template").on("submit", function(e) {
     // prevent the submit by writing this callback that prevents the default,
     // then removing this callback from future submits,
@@ -104,18 +98,18 @@ $("form.email-template").on("submit", function(e) {
     $(this).submit();
   });
 
-$( "#first_name" ).click(function() {
-  $('#editor').append("{{first_name}}");
-});
-$( "#last_name" ).click(function() {
-  $('#editor').append("{{last_name}}");
-});
-$( "#email" ).click(function() {
-  $('#editor').append("{{email}}");
-});
-$( "#phone" ).click(function() {
-  $('#editor').append("{{phone}}");
-});
+  $( "#first_name" ).click(function() {
+    $('#editor').append("{{first_name}}");
+  });
+  $( "#last_name" ).click(function() {
+    $('#editor').append("{{last_name}}");
+  });
+  $( "#email" ).click(function() {
+    $('#editor').append("{{email}}");
+  });
+  $( "#phone" ).click(function() {
+    $('#editor').append("{{phone}}");
+  });
 
 });
 
