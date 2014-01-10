@@ -73,7 +73,7 @@ end
 gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 #gem 'capistrano', '~> 2.4.0'
 # Use debugger

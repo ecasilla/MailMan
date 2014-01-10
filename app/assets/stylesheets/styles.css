@@ -34,7 +34,7 @@ body.dark-bg {
   table-layout: fixed;
   height: 100%;
   overflow: visible;
-  background-color: rgb(192,192,192,0.2);
+  background-color: rgba(192,192,192,0.2);
 }
 
 .main-content {

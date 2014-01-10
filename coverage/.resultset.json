@@ -4,6 +4,8 @@
       "/Users/ecasilla/dev/wdi/mailman/app/mailers/campaign_mailer.rb": [
         1,
         1,
+        null,
+        1,
         0,
         0,
         null,
@@ -79,6 +81,7 @@
         1,
         1,
         1,
+        1,
         null,
         null,
         null,
@@ -93,20 +96,7 @@
         1,
         0,
         0,
-        0,
-        0,
         null,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
         null,
         null,
         null,
@@ -150,21 +140,6 @@
         null,
         null
       ],
-      "/Users/ecasilla/dev/wdi/mailman/app/models/api_key.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        null,
-        1,
-        null,
-        3,
-        3,
-        null,
-        null,
-        null
-      ],
       "/Users/ecasilla/dev/wdi/mailman/app/models/campaign.rb": [
         1,
         1,
@@ -179,8 +154,23 @@
         null,
         null,
         null
+      ],
+      "/Users/ecasilla/dev/wdi/mailman/app/models/api_key.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        3,
+        3,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1387470000
+    "timestamp": 1389377627
   }
 }
