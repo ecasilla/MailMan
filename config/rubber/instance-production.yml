@@ -1,33 +1,6 @@
 ---
 - !ruby/object:Rubber::Configuration::InstanceItem
-  name: app02
-  domain: mail-man.co
-  roles: []
-  instance_id: 967775
-  image_type: 512MB
-  image_id: Ubuntu 12.04.3 x64
-  security_groups:
-  - mailman_production_default
-  - mailman_production_web
-  - mailman_production_app02
-  - mailman_production_app
-  - mailman_production_unicorn
-  - mailman_production_nginx
-  - mailman_production_db
-  - mailman_production_postgresql
-  - mailman_production_postgresql_master
-  - mailman_production_collectd
-  - mailman_production_monit
-  external_host: 
-  external_ip: 192.241.159.98
-  internal_host: 
-  internal_ip: 192.241.159.98
-  zone: 
-  provider: digital_ocean
-  platform: linux
-  root_device_type: 
-- !ruby/object:Rubber::Configuration::InstanceItem
-  name: mailman
+  name: app01
   domain: mail-man.co
   roles:
   - !ruby/object:Rubber::Configuration::RoleItem
@@ -53,12 +26,6 @@
     name: postgresql_master
     options: {}
   - !ruby/object:Rubber::Configuration::RoleItem
-    name: collectd
-    options: {}
-  - !ruby/object:Rubber::Configuration::RoleItem
-    name: monit
-    options: {}
-  - !ruby/object:Rubber::Configuration::RoleItem
     name: resque_web
     options: {}
   - !ruby/object:Rubber::Configuration::RoleItem
@@ -73,19 +40,30 @@
   - !ruby/object:Rubber::Configuration::RoleItem
     name: web_tools
     options: {}
-  instance_id: 981330
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: collectd
+    options: {}
+  - !ruby/object:Rubber::Configuration::RoleItem
+    name: monit
+    options: {}
+  instance_id: 981849
   image_type: 512MB
   image_id: Ubuntu 12.04.3 x64
   security_groups:
   - mailman_production_default
   - mailman_production_web
-  - mailman_production_mailman
+  - mailman_production_web_tools
+  - mailman_production_app01
   - mailman_production_app
   - mailman_production_unicorn
   - mailman_production_nginx
   - mailman_production_db
   - mailman_production_postgresql
   - mailman_production_postgresql_master
+  - mailman_production_resque_web
+  - mailman_production_resque_worker
+  - mailman_production_redis
+  - mailman_production_redis_master
   - mailman_production_collectd
   - mailman_production_monit
   external_host: 
