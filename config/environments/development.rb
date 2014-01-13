@@ -17,6 +17,15 @@ Mailman::Application.configure do
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = { address: "localhost", port: 1025 }
+#   config.action_mailer.smtp_settings = {
+#   address:            'email-smtp.us-east-1.amazonaws.com',
+#   port:                587,
+#   domain:              'example.com',
+#   user_name:            'AKIAJQPOKNOJCYKQGBTQ',
+#   password:            'Aqq7oo8/4zK89PGD0ZF9EwF82xDl6jOIzum+eMgJlLkn',
+#   authentication:      'plain',
+#   enable_starttls_auto: true  
+# }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

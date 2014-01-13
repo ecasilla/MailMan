@@ -17,7 +17,7 @@ class CampaignsController < ApplicationController
 
   def send_email
     @campaign.recipients.each do |recipient|
-      Resque.enqueue(CampaignBlaster, 22,22)
+      Resque.enqueue(CampaignBlaster, @campaign.id,recipient.id)
     end
     redirect_to root_url, notice: "Email sent"
   end
