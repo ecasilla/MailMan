@@ -16,7 +16,7 @@ GIT
 
 GIT
   remote: git://github.com/thoughtbot/paperclip.git
-  revision: 6459f2c00f16051ec397fe911bc21078291ce3b8
+  revision: eb75c08d4a68c3ff2d0a3fba19587fa24acce772
   specs:
     paperclip (3.5.2)
       activemodel (>= 3.0.0)
@@ -114,11 +114,6 @@ GEM
     font-awesome-sass (4.0.2)
       sass-rails (>= 3.1.1)
     formatador (0.2.4)
-    handlebars_assets (0.15)
-      execjs (>= 1.2.9)
-      multi_json
-      sprockets (>= 2.0.3)
-      tilt
     highline (1.6.20)
     hike (1.2.3)
     i18n (0.6.9)
@@ -307,7 +302,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   factory_girl_rails
   font-awesome-sass
-  handlebars_assets
   jasmine!
   jasmine-core!
   jbuilder (~> 1.2)

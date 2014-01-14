@@ -28,8 +28,6 @@ gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 gem "backaid", "~> 0.1.9"
 
-gem 'handlebars_assets'
-
 gem 'bootstrap-sass', '~> 3.0.3.0'
 
 gem 'aws-sdk', '~> 1.0'
@@ -81,3 +79,4 @@ gem 'open4'
 
 gem 'resque-pool'
 gem 'puma'
+
