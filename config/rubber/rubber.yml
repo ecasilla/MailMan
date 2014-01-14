@@ -114,7 +114,7 @@ cloud_providers:
 
     # REQUIRED: The image name and type for creating instances.
     image_id: Ubuntu 12.04.3 x64
-    image_type: 512MB
+    image_type: 1GB
 
     client_key: e37a2273c893d70a2551d909ddfa4640
     api_key: 25dc386ef498703323209b709613339f

@@ -1,6 +1,6 @@
 ---
 - !ruby/object:Rubber::Configuration::InstanceItem
-  name: app01
+  name: app03
   domain: mail-man.co
   roles:
   - !ruby/object:Rubber::Configuration::RoleItem
@@ -26,44 +26,24 @@
     name: postgresql_master
     options: {}
   - !ruby/object:Rubber::Configuration::RoleItem
-    name: resque_web
-    options: {}
-  - !ruby/object:Rubber::Configuration::RoleItem
-    name: resque_worker
-    options: {}
-  - !ruby/object:Rubber::Configuration::RoleItem
-    name: redis
-    options: {}
-  - !ruby/object:Rubber::Configuration::RoleItem
-    name: redis_master
-    options: {}
-  - !ruby/object:Rubber::Configuration::RoleItem
-    name: web_tools
-    options: {}
-  - !ruby/object:Rubber::Configuration::RoleItem
     name: collectd
     options: {}
   - !ruby/object:Rubber::Configuration::RoleItem
     name: monit
     options: {}
-  instance_id: 981849
-  image_type: 512MB
+  instance_id: 982345
+  image_type: 1GB
   image_id: Ubuntu 12.04.3 x64
   security_groups:
   - mailman_production_default
   - mailman_production_web
-  - mailman_production_web_tools
-  - mailman_production_app01
+  - mailman_production_app03
   - mailman_production_app
   - mailman_production_unicorn
   - mailman_production_nginx
   - mailman_production_db
   - mailman_production_postgresql
   - mailman_production_postgresql_master
-  - mailman_production_resque_web
-  - mailman_production_resque_worker
-  - mailman_production_redis
-  - mailman_production_redis_master
   - mailman_production_collectd
   - mailman_production_monit
   external_host: 
